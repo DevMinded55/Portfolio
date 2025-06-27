@@ -1,0 +1,60 @@
+@use 'all-styles' as all;
+
+
+//Pfeil nach unten fehlt noch
+
+
+section {
+    padding-left: 156px;
+    padding-right: 156px;
+    width: 100%;
+    height: 554px;
+    background: #0B042D;
+    @include all.letsflex($justify: space-between, $align: end);
+
+    .image-crop {
+        width: 554px;
+        height: 539px;
+        background-image: url('/assets/images/me1.png');
+        //Bild ist nicht richtig zugeschnitten
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .title {
+        font-size: 54px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 0%;
+        color: #02F4BF;
+    }
+
+    .name {
+        font-size: 82px;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: 0%;
+        color: #02F4BF;
+    }
+
+    //Position nicht perfekt
+    button{
+        width: 169px;
+        height: 52px;
+        gap: 10px;
+        position: absolute;
+        top: -200px;
+        left: -55px;
+        transform: rotate(270deg);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 0%;
+        color:#E15544 ;
+        background: #0B042D;
+        border-color: #02F4BF;
+        border-width: 1px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}

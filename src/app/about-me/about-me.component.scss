@@ -1,0 +1,53 @@
+@use 'all-styles' as all;
+
+section{
+    @include all.letsflex($justify: center, $gap: 10px);
+    background: #0B042D;
+    padding-left: 156px;
+    padding-right: 156px;
+    width: 100%;
+    //height: 452px;
+
+    .image-crop2 {
+        width: 554px;
+        height: 539px;
+        background-image: url('/assets/images/me2.png');
+        //Bild ist nicht richtig zugeschnitten
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .why-me{
+        width: 729px;
+        height: 452px;
+        @include all.letsflex($direction: column,$align: end);
+    }
+    img{
+        height: 186px;
+        width: 568px;
+    }
+    h2{
+        font-size: 54px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 0%;
+        color: #E15544;
+    }
+    b{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 120%;
+        letter-spacing: 0%;
+        color: #02F4BF;
+    }
+    button{
+        width: 169px;
+        height: 52px;
+        background: #02F4BF;
+        color: #0B042D;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 0%;
+        border-width: 0;
+    }
+}

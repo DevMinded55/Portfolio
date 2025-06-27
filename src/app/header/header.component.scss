@@ -1,0 +1,46 @@
+@use 'all-styles' as all;
+
+header{
+    
+    @include all.letsflex($justify: space-between, $align: center);
+    padding-left: 140px;
+    padding-right: 140px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    position: sticky;
+    background: #0B042D;
+    
+    h2{
+        font-size: 48px;
+        font-weight: 400;
+        font-family: "Handjet";
+        line-height: 100%;
+        letter-spacing: 5%;
+        color: #E15544;
+    }
+    .links{
+    @include all.letsflex($justify: space-between, $align: center);
+        width: 636px;
+        height: 44px;
+    p{
+        //Gap zwischen Why me noch anpassen
+        font-size: 22px;
+        font-weight: 500;
+        color: #E15544;
+        line-height: 120%;
+        letter-spacing: 0%;
+        
+    }
+}
+    .language-switch{
+        @include all.letsflex($gap: 6px, $align: center);
+    p{
+    font-size: 18px;
+    font-weight: 700;
+    color: #E15544;
+    }
+}
+}
+
+
+

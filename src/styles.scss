@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    scroll-behavior: smooth;
+    font-family: "Roboto Mono";
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("./../public/assets/fonts/RobotoMono-VariableFont_wght.ttf") format('ttf');
+        //Font stimmt noch nicht
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; // Optional: verbessert Ladeverhalten
+}
+//Funktioniert noch nicht mit der FONT
+@font-face {
+    font-family: "Handjet";
+    src: url("./../public/assets/fonts/Handjet-VariableFont_ELGRELSH_wght.ttf") format('ttf');
+        
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; // Optional: verbessert Ladeverhalten
+}
