@@ -1,20 +1,20 @@
 <footer>
-    <div class="content">
-    <div class="upper">
-        <div>
-            <h2>&lt;BK&gt;</h2>
-            <h3>frontend developer</h3>
+    <div class="footer content">
+        <div class="footer-box">
+            <div class="footer-brand">
+                <p class="fontHandjet symbol">&lt;BK&gt;</p>
+                <p id="role-label">frontend developer</p>
+            </div>
+            <p>© Burak Keles 2025</p>
+            <div class="social-icons">
+                <a class="git-icon" href="https://github.com/DevMinded55" target="_blank"></a>
+                <a class="mail-icon" href="mailto:keles490@googlemail.com"></a>
+                <a class="linkedin-icon" href="#" target="_blank"></a>
+            </div>
         </div>
-        <p>© Burak Keles 2025</p>
-        <div class="icons">
-            <img src="assets/icons/github.png" alt="">
-            <img src="assets/icons/mail.png" alt="">
-            <img src="assets/icons/linkedin.png" alt="">
+        <div class="legal-links">
+            <a [routerLink]="['/impressum']">{{'footer.legal' | translate }}</a>
+            <a [routerLink]="['/privacy-policy']">{{'footer.policy' | translate }}</a>
         </div>
-    </div>
-    <div class="lower">
-        <a href="#">Legal notice</a>
-        <a href="#">privacy policy</a>
-    </div>
     </div>
 </footer>

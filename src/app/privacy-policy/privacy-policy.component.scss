@@ -1,0 +1,24 @@
+@use 'all-styles' as all;
+@use '../../styles.scss';
+
+section{
+    background-color: #120b35;
+    min-height: 100dvh;
+    color: #02F4BF;
+    font-size: 16px;
+    @include all.letsflex($direction: column, $justify: center, $align: center);
+    p{
+        margin: 8px;
+    }
+    h1{
+        font-size: 54px;
+        color: #E15544;
+    }
+    a{
+        color: #E15544;
+    }
+    .link{
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+}

@@ -1,60 +1,131 @@
 @use 'all-styles' as all;
+@use '../../styles.scss';
 
-
-//Pfeil nach unten fehlt noch
-
-
-section {
-    padding-left: 156px;
-    padding-right: 156px;
-    width: 100%;
-    height: 554px;
-    background: #0B042D;
-    @include all.letsflex($justify: space-between, $align: end);
-
-    .image-crop {
-        width: 554px;
-        height: 539px;
-        background-image: url('/assets/images/me1.png');
-        //Bild ist nicht richtig zugeschnitten
-        background-size: cover;
-        background-repeat: no-repeat;
+section{
+    background-color: #120b35;
+}
+.hero-wrapper{
+    @include all.letsflex($justify: center, $align: center);
+    height: 100dvh;
+    margin-left: 108px;
+    margin-right: 108px;
+    @media (max-width: 880px){
+        flex-direction: column-reverse;
+        justify-content: flex-end;
     }
-
-    .title {
-        font-size: 54px;
-        font-weight: 500;
-        line-height: 120%;
-        letter-spacing: 0%;
-        color: #02F4BF;
+    @media (max-width: 570px){
+        margin-left: 50px;
+        margin-right: 50px;
     }
-
-    .name {
-        font-size: 82px;
-        font-weight: 700;
-        line-height: 120%;
-        letter-spacing: 0%;
-        color: #02F4BF;
+    @media (max-width: 380px){
+        padding-right: 20px;
+        padding-left: 20px;
     }
-
-    //Position nicht perfekt
-    button{
-        width: 169px;
-        height: 52px;
-        gap: 10px;
-        position: absolute;
-        top: -200px;
-        left: -55px;
-        transform: rotate(270deg);
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 120%;
-        letter-spacing: 0%;
-        color:#E15544 ;
-        background: #0B042D;
-        border-color: #02F4BF;
-        border-width: 1px;
-        padding-top: 15px;
-        padding-bottom: 15px;
+    img{
+        height: 80%;
+        width: 40%;
+        object-fit: cover;
+        @media (max-width: 1095px){
+            width: 50%;
+            
+        }
+        @media (max-width: 880px){
+                height: 70%;
+                margin-top: 24%;
+                width: 120%;
+                margin-bottom: 16px;
+        }
+        @media (max-width: 570px){
+                width: 110%;
+        }
+        @media (max-width: 380px){
+                width: 140%;
+        }
+    }
+    .hero-main{
+        width: 60%;
+        height: 80%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        // @include all.letsflex($direction: column, $justify: space-between); // FEHLER, PFEIL NICHT RICHTIG PLATZIERT?!
+        @media (max-width: 880px){
+            text-align: center;
+            height: 0;
+            width: 100%;
+        }
+        .hero-headline{
+            color: #02F4BF;
+            h1{
+                font-size: 82px;
+                @media (max-width: 1400px){
+                    font-size: 64px ;
+                }
+                @media (max-width: 1150px){
+                    font-size: 36px;
+                }
+                @media (max-width: 535px){
+                    font-size: 32px;
+                }
+            }
+            h2{
+                font-size: 54px;
+                @media (max-width: 1400px){
+                    font-size: 40px;
+                }
+                @media (max-width: 1150px){
+                    font-size: 24px;
+                }
+                @media (max-width: 500px){
+                    font-size: 16px;
+                }
+            }
+        }
+        .hero-actions{
+            height: 60%;
+            @include all.letsflex($justify: space-between, $align: center);
+            margin-right: 180px;
+            margin-left: -58px;
+            @media (max-width: 880px){
+                display: none;
+            }
+            img{
+                height: 70px;
+                width: 30px;
+                margin-top: 300px;
+            }
+            .text-link-vertical{
+                transform: rotate(-90deg);
+                color: #E15544;
+                text-decoration: none;
+                border: 1.5px solid #02F4BF;
+                height: 50px;
+                width: 170px;
+                @include all.letsflex($justify: center, $align:center);
+                transition: color 0.6s ease;
+                &:hover{
+                    color: #02F4BF;
+                }
+            }
+            .scroll-cue{
+                margin-top: 300px;
+                background: url('../../../public/assets/images/about_me/arrow-down.png');
+                width: 50px;
+                height: 70px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                @media (max-width: 1250px){
+                    display: none;
+                }
+            }
+            .scroll-cue:hover{
+                background: url('../../../public/assets/images/about_me/arrow-down-hover.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+            
+        }
     }
 }

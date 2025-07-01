@@ -1,0 +1,30 @@
+@use 'all-styles' as all;
+
+div{
+
+    @include all.letsflex($align: center, $justify: space-between, $direction: column);
+    height: 100px;
+    width: 88px;
+    text-align: center;
+    @media (max-width: 506px){
+        height: 42px;
+        width: 42px;
+    }
+    p{
+    color: #02F4BF;
+    font-size: 18px;
+    @media (max-width: 506px){
+            display: none;
+        }
+    }
+    img{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    @media (max-width: 506px){
+        height: 42px;
+        width: 42px;
+    }
+    }
+}
+

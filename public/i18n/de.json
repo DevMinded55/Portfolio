@@ -1,0 +1,72 @@
+{
+  "header": {                          
+    "nav1": "Warum ich",
+    "nav2": "Fähigkeiten",
+    "nav3": "Projekte",
+    "nav4": "Kontakt"
+  },
+  "a-t-f": {
+    "button": "KONTAKT"
+  },
+  "about-me": {
+    "h3": "Warum ich",
+    "text": "Ich habe eine große Leidenschaft für das Programmieren und ein besonderes Interesse an modernen Webtechnologien. Neue Herausforderungen motivieren mich, mein Wissen kontinuierlich zu erweitern und mich beruflich weiterzuentwickeln. Ich zeichne mich durch eine strukturierte Arbeitsweise, ausgeprägte Planungsfähigkeiten und eine lösungsorientierte Denkweise aus. Kontinuierliches Lernen ist ein zentraler Bestandteil meiner beruflichen Entwicklung.",
+    "h4": "Ich bin",
+    "located": "ansässig",
+    "in": "in Erbach (Odw.)",
+    "open": "offen für",
+    "relocate": "einen Umzug",
+    "remote": "Remote-Arbeit",
+    "talk": "Lass uns reden"
+  },
+  "skills": {
+    "h3": "Meine Fähigkeiten",
+    "text": "Ich freue mich darauf, neue Technologien zu lernen - teile mir einfach mit, was du benötigst."
+
+  },
+  "projects": {
+    "h3": "Meine Projekte",
+    "join": {
+      "description": "Ein Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu."
+    },
+    "sharkie": {
+      "description": "Ein Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu."
+    },
+    "polloLoco": {
+      "description": "Ein Jump-'n'-Run-Spiel auf objektorientierter Basis. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+    }
+  },
+  "teamplayer": {
+    "h4": "Brauchst du einen Teamplayer? Hier ist, was meine Kollegen über mich sagen",
+    "h3-resp": "Brauchst du einen Teamplayer?",
+    "h4-resp": "Hier ist, was meine Kollegen über mich sagen",
+    "feedback1": {
+      "personalFeedbacks": "Marcus musste Inhalte entwickeln, formatieren und in Zusammenarbeit mit den Teammitgliedern liefern. Er ist eine verlässliche und freundliche Person."
+    },
+    "feedback2": {
+      "personalFeedbacks": "Er ist ein vertrauenswürdiger Teamplayer und kommt gut mit dem Stress von Deadlines zurecht. Er arbeitet strukturiert und schreibt klaren Code."
+    },
+    "feedback3": {
+      "personalFeedbacks": "Er ist eine verlässliche und freundliche Person. Arbeitet strukturiert und schreibt klaren Code. Ich kann ihn als Kollegen empfehlen."
+    }
+  },
+  "contact":{
+    "h3": "Kontaktieren Sie mich",
+    "text": "Ich freue mich darauf, mit Ihnen in Kontakt zu treten und mehr über mögliche Projekte zu erfahren. Als engagierter Frontend-Webentwickler interessieren mich besonders Aufgaben, bei denen ich moderne und benutzerfreundliche Oberflächen gestalten kann.",
+    "name": "Ihr Name",
+    "email": "Ihre Email",
+    "message": "Ihre Nachricht",
+    "i-have": "Ich habe die ",
+    "agree": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "policy": "Datenschutzerklärung",
+    "send": "Senden"
+  },
+  "footer": {
+    "legal": "Impressum",
+    "policy": "Datenschutzerklärung"
+  },
+  "impressum": {
+    "h1": "Impressum",
+    "btn": "Zurück"
+  }
+}

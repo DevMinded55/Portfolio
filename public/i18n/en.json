@@ -1,0 +1,71 @@
+{
+  "header": {                          
+    "nav1": "Why me",
+    "nav2": "Skills",
+    "nav3": "Projects",
+    "nav4": "Contact"
+  },
+  "a-t-f": {
+    "button": "CONTACT ME"
+  },
+  "about-me": {
+    "h3": "Why me",
+    "text": "I have a strong passion for programming and a particular interest in modern web technologies. New challenges motivate me to continuously expand my knowledge and grow professionally. I am distinguished by my structured approach, strong planning skills, and solution-oriented mindset. Continuous learning is a key part of my professional development.",
+    "h4": "I am",
+    "located": "located",
+    "in": "in Erbach (Odw.)",
+    "open": "open for",
+    "relocate": "relocate",
+    "remote": "work remote",
+    "talk": "Let's talk"
+  },
+  "skills": {
+    "h3": "My Skills",
+    "text": "I am always happy to learn new technologies,just tell me what you need."
+  },
+  "projects": {
+    "h3": "My Projects",
+    "join": {
+      "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    },
+    "sharkie": {
+      "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    },
+    "polloLoco": {
+      "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+    }
+  },
+  "teamplayer": {
+    "h4": "Need a teamplayer? Here what my colleagues said about me",
+    "h3-resp": "Need a teamplayer?",
+    "h4-resp": "Here what my colleagues said about me",
+    "feedback1": {
+      "personalFeedbacks": "Marcus had to develop, format and deliver content in collaboration with the team members.He is a reliable and friendly person."
+    },
+    "feedback2": {
+      "personalFeedbacks": " He is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code. "
+    },
+    "feedback3": {
+      "personalFeedbacks": " He is a reliable and friendly person. Work in a structured way and write a clear code. I recommend him as a colleague."
+    }
+  },
+  "contact":{
+    "h3": "Contact me",
+    "text": "I look forward to connecting with you and learning more about potential projects. As a dedicated Frontend Web Developer, I am particularly interested in roles where I can help create modern, user-friendly interfaces.",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Your Message",
+    "i-have": "I've read the ",
+    "agree": " and agree to the processing of my data as outlined.",
+    "policy": "privacy policy",
+    "send": "Send"
+  },
+  "footer": {
+    "legal": "Legal notice",
+    "policy": "privacy policy"
+  },
+  "impressum": {
+    "h1": "Legal Notice",
+    "btn": "back"
+  }
+}

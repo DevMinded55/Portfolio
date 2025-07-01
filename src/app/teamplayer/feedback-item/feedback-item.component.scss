@@ -1,0 +1,27 @@
+@use 'all-styles' as all;
+@use '../../../styles.scss';
+
+
+.feedbacks{
+
+    @include all.letsflex($direction: column, $justify: space-between);
+    width: 320px;
+    height: 200px;
+    @media (max-width: 1485px){
+        margin-right: 24px;
+    }
+    @media (max-width: 1270px){
+        border: 1px solid #02F4BF;
+        width: 205px;
+        padding: 8px;
+        height: 230px;
+    }
+    h4{
+        color: #E15544;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    p{
+        color: #02F4BF;
+    }
+}

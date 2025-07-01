@@ -1,0 +1,17 @@
+<section [class.reverse]="index % 2 === 1">
+    <div class="btn-resp">
+        <a class="github-btn" href="{{projects.gitlink}}" target="_blank">GitHub</a>
+        <a class="live-test-btn" href="{{projects.testlink}}" target="_blank">Live Test</a>
+    </div>
+    <img [src]="isHovered ? projects.hoverImage : projects.image" [alt]="projects.name" (mouseenter)="onMouseEnter()"
+        (mouseleave)="onMouseLeave()">
+    <div class="info-project">
+        <h4>{{projects.name}}</h4>
+        <p>{{projects.languages}}</p>
+        <p>{{ projects.description | translate }}</p>
+        <div class="btn-area">
+            <a class="github-btn" href="{{projects.gitlink}}" target="_blank">GitHub</a>
+            <a class="live-test-btn" href="{{projects.testlink}}" target="_blank">Live Test</a>
+        </div>
+    </div>
+</section>

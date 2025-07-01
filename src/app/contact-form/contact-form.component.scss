@@ -1,0 +1,319 @@
+@use 'all-styles' as all;
+@use '../../styles.scss';
+
+section{
+    background-color: #120b35;
+}
+.contact-form{
+    margin-left: 108px;
+    margin-right: 108px;
+    margin-bottom: 92px;
+    @media (max-width: 880px){
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    @media (max-width: 374px){
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    h3{
+        font-size: 54px;
+        color: #E15544;
+        @media (max-width: 817px){
+                font-size: 32px;
+                text-align: center;
+            }
+    }
+    color: #02F4BF;
+    font-size: 18px;
+    .h3-arrow{
+        @include all.letsflex($align: center);
+        @media (max-width: 817px){
+            justify-content: center;
+        }
+        img{
+            width: 140px;
+            height: 140px;
+            transform: scaleY(-1) rotate(50deg);
+            @media (max-width: 817px){
+                display: none;
+            }
+        }
+    }
+    .mail-phone-arrow{
+
+        @include all.letsflex($justify: space-between);
+        margin-bottom: 16px;
+        @media (max-width: 817px){
+            text-align: center;
+            
+        }
+        .arrow-up{
+            background: url('../../../public/assets/images/about_me/arrow-up.png');
+            width: 50px;
+            height: 70px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            @media (max-width: 817px){
+                display: none;
+            }
+        }
+        .arrow-up:hover{
+            background: url('../../../public/assets/images/about_me/arrow-up-hover.png');
+            width: 65px;
+            height: 70px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        .mail-phone{
+            @include all.letsflex();
+            gap: 85px;
+            p{
+                width: 46%;
+                margin-right: 8px;
+                @media (max-width: 817px){
+                font-size: 16px;
+                width: 100%;
+                margin-right: 0;
+                }
+            }
+            .links{
+                @include all.letsflex($direction: column, $justify: space-evenly, $gap: 20px);
+                @media (max-width: 817px){
+                    display: none;
+                }
+                
+                a{
+                    text-decoration: none;
+                    color: #02F4BF;
+                    font-size: 20px;
+                    @include all.letsflex($align: center);
+                    .link-email{
+                        margin-right: 8px;
+                        width: 30px;
+                        height: 30px;
+                        background: url('../../../public/assets/images/footer/email.png') no-repeat center;
+                        background-size: contain;
+                    }
+                    .link-email:hover{
+                        margin-right: 8px;
+                        width: 30px;
+                        height: 30px;
+                        background: url('../../../public/assets/images/footer/email-hover.png') no-repeat center;
+                        background-size: contain;
+                    }
+                    .link-phone{
+                        margin-right: 8px;
+                        width: 30px;
+                        height: 30px;
+                        background: url('../../../public/assets/images/footer/phone.png') no-repeat center;
+                        background-size: contain;
+                    }
+                    .link-phone:hover{
+                        margin-right: 8px;
+                        width: 30px;
+                        height: 30px;
+                        background: url('../../../public/assets/images/footer/phone-hover.png') no-repeat center;
+                        background-size: contain;
+                    }
+                    
+                }
+            }
+        }
+    }
+    .input-info{
+        @include all.letsflex($justify: space-between);
+        @media (max-width: 817px){
+            flex-direction: column;
+        }
+        
+        .name-email{
+            @include all.letsflex($direction: column, $justify: space-between);
+            width: 50%;
+            height: 144px;
+            @media (max-width: 817px){
+                width: 100%;
+            }
+        }
+        .text{
+            width: 50%;
+            @media (max-width: 817px){
+                width: 100%;
+                margin-top: 32px;
+            }
+            textarea{
+                width: 100%;
+            }
+        }
+    }
+}
+.d-none{
+    display: none;
+}
+
+.form-input{
+    background: none;
+    height: 56px;
+    border: solid 1px #02F4BF;
+    font-size: 18px;
+    color: #02F4BF;
+    padding-left: 10px;
+    width: 91%;
+    &.ng-valid.ng-touched {
+        border-color: green;
+        border-width: 2px;
+    }
+
+    &.ng-invalid.ng-touched {
+        border-color: red;
+        border-width: 3px;
+    }
+}
+.form-input::placeholder {
+    color: #02F4BF;
+}
+.form-text{
+    background: none;
+    height: 144px;
+    border: solid 1px #02F4BF;
+    font-size: 18px;
+    color: #02F4BF;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.form-text::placeholder{
+    color: #02F4BF;
+}
+.checkbox-label{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    @media (max-width: 817px){
+        font-size: 12px;
+        text-align: center;
+    }
+    a{
+        text-decoration: none;
+        color: #E15544;
+    }
+}
+.send-btn{
+@include all.letsflex($justify: end);
+    @media (max-width: 817px){
+        justify-content: center;
+    }
+    .send{
+        background: none;
+        color: #E15544;
+        border: solid 1px #E15544;
+        width: 100px;
+        height: 50px;
+        cursor: pointer;
+        &:hover{
+            color: #02F4BF;
+            border: solid 1px #02F4BF;
+        }
+        &:disabled {
+            cursor: default;          
+            opacity: 0.5;             
+            color: #aaa;              
+            border-color: #aaa;
+
+        &:hover {
+            color: #aaa;            
+            border-color: #aaa;
+        }
+        }
+        &.success {
+            background-color: #28a745; 
+            color: white;
+            border-color: #28a745;
+            transition: background-color 0.3s ease;
+        }
+    }
+}
+.arrow-resp{
+    display: none;
+    margin-top: 8px;
+    width: 40px;
+    height: 60px;
+    background: url('/assets/images/about_me/arrow-up.png') no-repeat center;
+    background-size: contain;
+    @media (max-width: 817px){
+        @include all.letsflex($justify: end);
+        margin-left: auto;
+    }
+}
+.arrow-resp:hover{
+    background: url('../../../public/assets/images/about_me/arrow-up-hover.png');
+    width: 40px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.links-resp{
+    display: none;
+    @media (max-width: 817px){
+        a{
+            @include all.letsflex($direction: column, $align: center);
+            text-decoration: none;
+            color: #02F4BF;
+            font-size: 14px;
+            margin-top: 16px;
+            img{
+                height: 30px;
+                width: 30px;
+            }
+        }
+    }
+}
+
+.icons-resp{
+    display: none;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    @media (max-width: 817px){
+        @include all.letsflex();
+    }
+    .icon-git{
+        width: 30px;
+        height: 30px;
+        background: url('../../../public/assets/images/footer/git.png') no-repeat center;
+        background-size: contain;
+    }
+    .icon-git:hover{
+        width: 30px;
+        height: 30px;
+        background: url('../../../public/assets/images/footer/git-hover.png') no-repeat center;
+        background-size: contain;
+    }
+    .icon-email{
+        width: 30px;
+        height: 30px;
+        background: url('../../../public/assets/images/footer/email.png') no-repeat center;
+        background-size: contain;
+    }
+    .icon-email:hover{
+        width: 30px;
+        height: 30px;
+        background: url('../../../public/assets/images/footer/email-hover.png') no-repeat center;
+        background-size: contain;
+    }
+    .icon-linkedin{
+        width: 30px;
+        height: 30px;
+        background: url('../../../public/assets/images/footer/linkedin.png') no-repeat center;
+        background-size: contain;
+    }
+    .icon-linkedin:hover{
+        width: 30px;
+        height: 30px;
+        background: url('../../../public/assets/images/footer/linkedin-hover.png') no-repeat center;
+        background-size: contain;
+    }
+    
+}

@@ -1,15 +1,56 @@
-<section>
-    <div class="image-crop2"></div>
+<section id="profile-overview">
+    <div class="profile-wrapper content">
+        <img id="image-large" src="/assets/images/hero_section/me2.png" alt="">
+        <div class="profile-text-group">
+            <h3>{{'about-me.h3' | translate }}</h3>
+            <div>{{'about-me.text' | translate }}</div>
 
-    <div class="why-me">
-        <h2>Why me</h2>
-        <b>Write some information about yourself that is IT related. Why are you passionate about coding? Highlight your motivation for professional growth and continuous learning. Emphasise your strong problem-solving skills and passion for coding.</b>
-        <img src="assets/images/Iam.png" alt="">
-        <button>Let's talk</button>
+            <div class="traits-box">
+                <img class="arrow-mobile" src="/assets/images/about_me/arrow1.png" alt="">
+                <h4 id="mobile-heading">{{'about-me.h4' | translate }}</h4>
+
+                <!-- LOCATION -->
+                <div class="trait-row">
+                    <h4 id="desktop-heading">{{'about-me.h4' | translate }}</h4>
+                    <img class="trait-icon" [src]="isLocationHovered ? icons.location.hover : icons.location.default"
+                        (mouseenter)="isLocationHovered = true" (mouseleave)="isLocationHovered = false"
+                        alt="Location Icon">
+                    <div class="trait-description">
+                        <p>{{'about-me.located' | translate }}</p>
+                        <p>{{'about-me.in' | translate }}</p>
+                    </div>
+                </div>
+
+                <!-- RELOCATE -->
+                <div class="trait-row">
+                    <img id="arrow-start" class="nav-arrow" src="/assets/images/about_me/arrow1.png" alt="">
+                    <img id="briefcase-icon" class="trait-icon"
+                        [src]="isRelocateHovered ? icons.relocate.hover : icons.relocate.default"
+                        (mouseenter)="isRelocateHovered = true" (mouseleave)="isRelocateHovered = false"
+                        alt="Relocate Icon">
+                    <div class="trait-description">
+                        <p>{{'about-me.open' | translate }}</p>
+                        <p>{{'about-me.relocate' | translate }}</p>
+                    </div>
+                </div>
+
+                <!-- REMOTE -->
+                <div class="trait-row">
+                    <img id="remote-icon" class="trait-icon"
+                        [src]="isRemoteHovered ? icons.remote.hover : icons.remote.default"
+                        (mouseenter)="isRemoteHovered = true" (mouseleave)="isRemoteHovered = false" alt="Remote Icon">
+                    <div class="trait-description">
+                        <p>{{'about-me.open' | translate }}</p>
+                        <p>{{'about-me.remote' | translate }}</p>
+                    </div>
+                    <img class="nav-arrow" src="/assets/images/about_me/arrow2.png" alt="">
+                    <img id="arrow-end" class="nav-arrow" src="/assets/images/about_me/arrow3.png" alt="">
+                </div>
+
+                <img id="arrow-mobile-flip" class="arrow-mobile" src="/assets/images/about_me/arrow1.png" alt="">
+            </div>
+
+            <a href="#contact-section">{{'about-me.talk' | translate }}</a>
+        </div>
     </div>
-    
-    
-
-
-
 </section>

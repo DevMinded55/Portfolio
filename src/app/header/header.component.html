@@ -1,15 +1,36 @@
 <header>
-    <div class="links">
-    <h2>&lt;BK&gt;</h2>
-    <p>Why me</p>
-    <p>Skills</p>
-    <p>Projects</p>
-    <p>Contact</p>
-</div>
+    <div class="header content">
+        <div class="logo-nav-container">
+            <a class="fontHandjet mark" href="#atf-section">&lt;BK&gt;</a>
+            <nav>
+                <a href="#about-me-section">{{'header.nav1' | translate }}</a>
+                <a href="#skills">{{'header.nav2' | translate }}</a>
+                <a href="#preoject-section">{{'header.nav3' | translate }}</a>
+                <a href="#contact-section">{{'header.nav4' | translate }}</a>
+            </nav>
+        </div>
+        <button id="menu-toggle" (click)="toggleOverlay()">
+            <img src="/assets/images/hero_section/burger-menu.png" alt="burger-menu">
+        </button>
+        <div class="lang-toggle">
+            <button (click)="changeLanguage('de')">DE</button>
+            <p>|</p>
+            <button (click)="changeLanguage('en')">EN</button>
+        </div>
+    </div>
 
-<div class="language-switch">
-    <p>DE</p>
-    <p>|</p>
-    <p>EN</p>
-</div>
+    <div class="menu-overlay" [class.d-none]="!overlayVisible">
+        <button id="close-icon" (click)="toggleOverlay()">
+            <img src="/assets/images/hero_section/close-menu.png" alt="">
+        </button>
+        <a href="#about-me-section" (click)="toggleOverlay()">{{'header.nav1' | translate }}</a>
+        <a href="#skills" (click)="toggleOverlay()">{{'header.nav2' | translate }}</a>
+        <a href="#preoject-section" (click)="toggleOverlay()">{{'header.nav3' | translate }}</a>
+        <a href="#contact-section" (click)="toggleOverlay()">{{'header.nav4' | translate }}</a>
+        <div class="lang-switch-popup">
+            <button (click)="changeLanguage('de')">DE</button>
+            <p>|</p>
+            <button (click)="changeLanguage('en')">EN</button>
+        </div>
+    </div>
 </header>

@@ -1,53 +1,223 @@
 @use 'all-styles' as all;
+@use '../../styles.scss';
 
-section{
-    @include all.letsflex($justify: center, $gap: 10px);
-    background: #0B042D;
-    padding-left: 156px;
-    padding-right: 156px;
-    width: 100%;
-    //height: 452px;
+section {
+    background-color: #120b35;
+}
 
-    .image-crop2 {
-        width: 554px;
-        height: 539px;
-        background-image: url('/assets/images/me2.png');
-        //Bild ist nicht richtig zugeschnitten
-        background-size: cover;
-        background-repeat: no-repeat;
+.profile-wrapper {
+    @include all.letsflex($justify: center, $align: center);
+    margin-left: 108px;
+    margin-right: 108px;
+    margin-bottom: 92px;
+
+    @media (max-width: 570px) {
+        margin-left: 50px;
+        margin-right: 50px;
     }
-    .why-me{
-        width: 729px;
-        height: 452px;
-        @include all.letsflex($direction: column,$align: end);
+
+    @media (max-width: 374px) {
+        margin-left: 20px;
+        margin-right: 20px;
     }
-    img{
-        height: 186px;
-        width: 568px;
+
+    #image-large {
+        height: 550px;
+        width: 35%;
+        object-fit: cover;
+
+        @media (max-width: 980px) {
+            display: none;
+        }
     }
-    h2{
-        font-size: 54px;
-        font-weight: 500;
-        line-height: 120%;
-        letter-spacing: 0%;
-        color: #E15544;
-    }
-    b{
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 120%;
-        letter-spacing: 0%;
+
+    .profile-text-group {
+        height: 550px;
+        width: 65%;
+        @include all.letsflex($direction: column, $justify: space-between, $align: flex-end);
         color: #02F4BF;
+        text-align: end;
+        padding-left: 24px;
+
+        @media (max-width: 980px) {
+            width: 100%;
+            align-items: center;
+            padding-left: 0;
+            text-align: center;
+        }
+
+        @media (max-width: 570px) {
+            height: 900px;
+        }
+
+        h3 {
+            font-size: 54px;
+            color: #E15544;
+
+            @media (max-width: 570px) {
+                font-size: 32px;
+            }
+        }
+
+        h4 {
+            font-size: 48px;
+            color: #E15544;
+
+            @media (max-width: 570px) {
+                font-size: 18px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            height: 52px;
+            padding-left: 8px;
+            padding-right: 8px;
+            background: #02F4BF;
+            @include all.letsflex($justify: center, $align: center);
+
+            &:hover {
+                color: #E15544;
+            }
+
+            @media (max-width: 980px) {
+                margin-left: 75%;
+            }
+
+            @media (max-width: 570px) {
+                margin-left: 0;
+            }
+        }
+
+        .traits-box {
+            width: 568px;
+
+            @media (max-width: 1140px) {
+                width: 470px;
+            }
+
+            @media (max-width: 980px) {
+                width: 100%;
+            }
+
+            .trait-row {
+                @include all.letsflex($justify: flex-start, $align: center);
+
+                @media (max-width: 570px) {
+                    justify-content: center;
+                    margin-bottom: 16px;
+                }
+
+                .trait-description {
+                    text-align: left;
+
+                    @media (max-width: 570px) {
+                        @include all.letsflex();
+                    }
+                }
+
+                #desktop-heading {
+                    margin-right: 10%;
+
+                    @media (max-width: 570px) {
+                        display: none;
+                    }
+                }
+
+                #arrow-start {
+                    margin-right: 35%;
+                    margin-left: 20%;
+                }
+
+                #briefcase-icon {
+                    min-height: 48.98px;
+                    width: 30px;
+                    object-fit: contain;
+                    transition: all 0.7s ease-in-out;
+
+                    @media (max-width: 570px) {
+                        height: 38.98px;
+                        width: 20px;
+                    }
+                }
+
+                #remote-icon {
+                    margin-left: 30%;
+                    min-height: 46.99px;
+                    width: 53.58px;
+                    object-fit: contain;
+                    transition: all 2s ease-in-out;
+
+                    @media (max-width: 570px) {
+                        margin-left: 0;
+                        height: 36.99px;
+                        width: 43.58px;
+                    }
+                }
+
+                #arrow-end {
+                    margin-left: 10%;
+
+                    @media (max-width: 570px) {
+                        display: none;
+                    }
+                }
+            }
+
+            p {
+                font-size: 18px;
+
+                @media (max-width: 570px) {
+                    font-size: 16px;
+                    margin-right: 8px;
+                }
+            }
+
+            .trait-icon {
+                // height: 41px;
+                min-height: 41px;
+                width: 33.31px;
+                margin-right: 16px;
+                object-fit: contain;
+                transition: all 0.3s ease-in-out;
+
+                @media (max-width: 570px) {
+                    height: 31px;
+                    width: 23.31px;
+                }
+            }
+
+            .nav-arrow {
+                height: 75px;
+                width: 75px;
+
+                @media (max-width: 570px) {
+                    display: none;
+                }
+            }
+        }
     }
-    button{
-        width: 169px;
-        height: 52px;
-        background: #02F4BF;
-        color: #0B042D;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 120%;
-        letter-spacing: 0%;
-        border-width: 0;
+}
+
+.arrow-mobile {
+    display: none;
+
+    @media (max-width: 570px) {
+        @include all.letsflex();
+        margin-left: 9%;
+    }
+}
+
+#arrow-mobile-flip {
+    transform: scaleX(-1);
+    margin-left: 60%;
+}
+
+#mobile-heading {
+    display: none;
+
+    @media (max-width: 570px) {
+        @include all.letsflex($justify: center);
+        margin-bottom: 8px;
     }
 }

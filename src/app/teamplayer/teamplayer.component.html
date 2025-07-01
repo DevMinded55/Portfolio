@@ -1,0 +1,16 @@
+<section>
+    <div class="teamplayer content">
+        <h4>{{'teamplayer.h4' | translate }}</h4>
+        <h3 class="h3-h4-resp">{{'teamplayer.h3-resp' | translate }}</h3>
+        <h4 class="h3-h4-resp">{{'teamplayer.h4-resp' | translate }}</h4>
+        <div class="arrow-and-feedbacks">
+            <img src="/assets/images/about_me/arrow1.png" alt="">
+            <div class="feedbacks-content">
+                @for (item of feedbacks; track $index) {
+                    <app-feedback-item [feedbacks]="item"></app-feedback-item>
+                }
+            </div>
+        </div>
+
+    </div>
+</section>

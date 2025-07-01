@@ -1,0 +1,56 @@
+<section id="contact-section">
+    <div class="contact-form content">
+        <div class="h3-arrow">
+            <h3>{{'contact.h3' | translate }}</h3>
+            <img src="/assets/images/about_me/arrow2.png" alt="pfeil rechts">
+        </div>
+        <div class="mail-phone-arrow">
+            <div class="mail-phone">
+                <p>{{'contact.text' | translate }}</p>
+                <div class="links">
+                    <a href="mailto:keles490@googlemail.com"><div class="link-email"></div><span>E-mail : keles490&commat;gmail.com</span></a>
+                    <a href="tel:015127074246"><div class="link-phone"></div><span>Tel : 0151 27 07 42 46</span></a>
+                </div>
+            </div>
+            <a class="arrow-up" href="#atf-section"></a>
+        </div>
+        <div>
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                <div class="input-info">
+                    <div class="name-email">
+                        <label class="d-none" for="name"></label>
+                        <input [(ngModel)]="contactData.name" class="form-input" type="text" id="name" name="name" placeholder="{{'contact.name' | translate }}" required>
+
+                        <label class="d-none" for="email"></label>
+                        <input [(ngModel)]="contactData.email" class="form-input" type="email" id="email" name="email" placeholder="{{'contact.email' | translate }}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    </div>
+                    <div class="text">
+                        <label class="d-none" for="message"></label>
+                        <textarea [(ngModel)]="contactData.message" class="form-text" id="message" name="message" placeholder="{{'contact.message' | translate }}" required></textarea>
+                    </div>
+                </div>
+                <div class="checkbox-label">
+                    <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input" name="privacy" [(ngModel)]="contactData.privacy" required>
+                    {{'contact.i-have' | translate }}<a href="/privacy-policy">{{'contact.policy' | translate }}</a>{{'contact.agree' | translate }}
+                    </label>
+                </div>
+                <div class="send-btn">
+                    <input class="send" type="submit" value="{{'contact.send' | translate }}" [disabled]="!contactForm.form.valid" [class.success]="sendSuccess">
+                </div>
+            </form>
+        </div>
+        <div>
+            <a class="arrow-resp" href="#atf-section"></a>
+        </div>
+        <div class="links-resp">
+            <a href="mailto:r.keles490@googlemail.com"><img src="/assets/images/footer/email.png" alt=""><span>keles490&commat;gmail.com</span></a>
+            <a href="tel:015127074246"><img src="/assets/images/footer/phone.png" alt=""><span>0151 27 07 42 46</span></a>
+        </div>
+        <div class="icons-resp">
+            <a class="icon-git" href="https://github.com/Devminded55" target="_blank"></a>
+            <a class="icon-email" href="mailto:keles490@googlemail.com"></a>
+            <a class="icon-linkedin" href="#" target="_blank"></a>
+        </div>
+    </div>
+</section>

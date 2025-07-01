@@ -1,46 +1,163 @@
 @use 'all-styles' as all;
+@use '../../styles.scss';
 
-header{
-    
-    @include all.letsflex($justify: space-between, $align: center);
-    padding-left: 140px;
-    padding-right: 140px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+header {
+    margin-bottom: -8dvh;
     position: sticky;
-    background: #0B042D;
-    
-    h2{
-        font-size: 48px;
-        font-weight: 400;
-        font-family: "Handjet";
-        line-height: 100%;
-        letter-spacing: 5%;
-        color: #E15544;
-    }
-    .links{
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom,
+            rgba(18, 11, 53, 1) 0%,
+            rgba(18, 11, 53, 1) 50%,
+            rgba(18, 11, 53, 0.6) 100%);
+}
+
+.header {
     @include all.letsflex($justify: space-between, $align: center);
-        width: 636px;
-        height: 44px;
-    p{
-        //Gap zwischen Why me noch anpassen
-        font-size: 22px;
-        font-weight: 500;
+    padding-right: 140px;
+    padding-left: 140px;
+    height: 92px;
+
+    @media (max-width: 880px) {
+        padding-right: 50px;
+        padding-left: 50px;
+        height: 77px;
+    }
+
+    @media (max-width: 380px) {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .logo-nav-container {
+        @include all.letsflex($align: center);
+
+        .mark {
+            font-size: 48px;
+
+            &:hover {
+                color: #E15544;
+            }
+
+            @media (max-width: 880px) {
+                font-size: 44px;
+            }
+        }
+
+        >nav {
+            @include all.letsflex($justify: space-evenly);
+            width: 800px;
+            font-size: 22px;
+
+            @media (max-width: 1255px) {
+                width: 500px;
+            }
+
+            @media (max-width: 970px) {
+                display: none;
+            }
+        }
+
+        a {
+            color: #E15544;
+            text-decoration: none;
+
+            &:hover {
+                color: #02F4BF;
+            }
+        }
+    }
+
+    .lang-toggle {
+        width: 64px;
+        @include all.letsflex($justify: space-between);
+
+        @media (max-width: 970px) {
+            display: none;
+        }
+
+        button {
+            background-color: transparent;
+            color: #E15544;
+            cursor: pointer;
+            border: none;
+
+            &:hover {
+                color: #02F4BF;
+            }
+        }
+
+        p {
+            color: #E15544;
+        }
+    }
+}
+
+#menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @media (max-width: 970px) {
+        @include all.letsflex();
+    }
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    background: linear-gradient(to top, #291680, #120b35);
+
+    @include all.letsflex($justify: space-evenly, $align: center, $direction: column);
+
+    a {
+        text-decoration: none;
         color: #E15544;
-        line-height: 120%;
-        letter-spacing: 0%;
-        
+        font-size: 18px;
+        font-weight: 500;
+
+        &:hover {
+            color: #02F4BF;
+        }
+    }
+
+    .lang-switch-popup {
+        width: 64px;
+        @include all.letsflex($align: center, $justify: space-evenly, $direction: row);
+        color: #E15544;
+        font-size: 18px;
+
+        button {
+            background: transparent;
+            border: none;
+            color: #E15544;
+            cursor: pointer;
+            font-size: 18px;
+
+            &:hover {
+                color: #02F4BF;
+            }
+        }
+    }
+
+    #close-icon {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        right: 20px;
     }
 }
-    .language-switch{
-        @include all.letsflex($gap: 6px, $align: center);
-    p{
-    font-size: 18px;
-    font-weight: 700;
-    color: #E15544;
-    }
+
+.d-none {
+    display: none;
 }
-}
-
-
-

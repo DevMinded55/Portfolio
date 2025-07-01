@@ -1,0 +1,23 @@
+@use 'all-styles' as all;
+@use '../../styles.scss';
+
+section{
+    background-color: #120b35;
+    min-height: 100dvh;
+    color: #02F4BF;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p{
+        margin: 8px;
+    }
+    h1{
+        font-size: 54px;
+        color: #E15544;
+    }
+    a{
+        color: #E15544;
+    }
+}

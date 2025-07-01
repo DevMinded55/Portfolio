@@ -1,32 +1,113 @@
 @use 'all-styles' as all;
+@use '../../styles.scss';
 
-section{
-    padding-left: 156px;
-    padding-right: 156px;
-    width: 100%;
-    height: 423px;
-    background: #0B042D;
-    @include all.letsflex($direction: column);
-
-    h1{
-    font-size: 54px;
-    font-weight: 500;
-    line-height: 120%;
-    letter-spacing: 0%;
-    color:#E15544 ;
+section {
+    _background-color: #120b35;
+    background: linear-gradient(to top, #120b35 0%, #1f0a7e 50%, #120b35 100%);
 }
-    .my-skills{
-        flex-wrap: wrap;
+
+.my-skills {
+    margin-left: 108px;
+    margin-right: 108px;
+    width: 100%;
+    margin-bottom: 92px;
+
+    p {
+        color: #02F4BF;
+        font-size: 16px;
+        text-align: center;
     }
 
-    .skills1{
-        @include all.letsflex( $gap: 100px);
-        width: 1,219px;
-        
+    @media (max-width: 685px) {
+        @include all.letsflex($justify: center, $align: center, $direction: column);
     }
-    .skills2{
-        @include all.letsflex($align:end, $gap: 100px);
-        width: 1,219px;
-        
+
+    @media (max-width: 880px) {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    @media (max-width: 374px) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    h3 {
+        font-size: 54px;
+        color: #E15544;
+        margin-bottom: 36px;
+
+        @media (max-width: 506px) {
+            font-size: 32px;
+        }
+    }
+
+    div {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(187px, 1fr));
+        gap: 80px;
+        align-items: center;
+
+        @media (max-width: 685px) {
+            @include all.letsflex($justify: center, $gap: 72px);
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.hint-arrow {
+    display: none;
+
+    @media (max-width: 498px) {
+        @include all.letsflex();
+        transform: scaleX(-1) scaleY(-1) rotate(-30deg);
+    }
+}
+
+.hint-text {
+    display: none;
+
+    @media (max-width: 498px) {
+        @include all.letsflex();
+    }
+}
+
+.hint-btn {
+    display: none;
+
+    @media (max-width: 498px) {
+        margin-top: 32px;
+        display: flex;
+        text-decoration: none;
+        height: 52px;
+        padding-left: 8px;
+        padding-right: 8px;
+        background: #02F4BF;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            color: #E15544;
+        }
+    }
+}
+
+.skill-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: max-content;
+
+    .skill-note {
+        color: #02F4BF;
+        font-size: 14px;
+        white-space: normal;
+        max-width: 220px;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
     }
 }
