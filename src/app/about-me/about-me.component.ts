@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
+import { ScrollToContactDirective } from '../shared/directives/scroll-to-contact.directive';
 
 @Component({
   selector: 'app-about-me',
-  imports: [TranslatePipe],
+  imports: [TranslatePipe, ScrollToContactDirective],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
 })

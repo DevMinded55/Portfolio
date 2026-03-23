@@ -6,8 +6,11 @@
     "nav4": "Contact",
     "nav5": "Privacy"
   },
+  "a11y": {
+    "scrollToContact": "Scroll to contact form"
+  },
   "a-t-f": {
-    "button": "CONTACT ME"
+    "button": "Let's talk"
   },
   "about-me": {
     "h3": "Why me",

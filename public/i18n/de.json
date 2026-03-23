@@ -6,8 +6,11 @@
     "nav4": "Kontakt",
     "nav5": "Datenschutz"
   },
+  "a11y": {
+    "scrollToContact": "Zum Kontaktformular scrollen"
+  },
   "a-t-f": {
-    "button": "KONTAKT"
+    "button": "Lass uns reden"
   },
   "about-me": {
     "h3": "Warum ich",

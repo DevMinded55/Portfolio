@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { ScrollToContactDirective } from '../shared/directives/scroll-to-contact.directive';
 
 @Component({
   selector: 'app-header',
-  imports: [TranslatePipe, RouterLink],
+  imports: [TranslatePipe, RouterLink, ScrollToContactDirective],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

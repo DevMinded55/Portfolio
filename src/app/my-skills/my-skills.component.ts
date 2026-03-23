@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { Skills } from '../shared/interfaces/skills';
 import { SkillsItemComponent } from './skill-item/skill-item.component';
 import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
+import { ScrollToContactDirective } from '../shared/directives/scroll-to-contact.directive';
 
 @Component({
   selector: 'app-my-skills',
-  imports: [SkillsItemComponent, CommonModule, TranslatePipe],
+  imports: [SkillsItemComponent, CommonModule, TranslatePipe, ScrollToContactDirective],
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss'
 })

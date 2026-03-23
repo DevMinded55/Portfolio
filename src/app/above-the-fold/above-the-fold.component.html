@@ -2,8 +2,9 @@
     <div class="hero-wrapper content">
         <div class="hero-main">
             <div class="hero-actions">
-                <a class="text-link-vertical" href="#contact-section">{{'a-t-f.button' | translate }}</a>
-                <a class="scroll-cue" href="#contact-section"></a>
+                <a class="text-link-vertical" href="#contact-section" appScrollToContact>{{'a-t-f.button' | translate }}</a>
+                <a class="scroll-cue" href="#contact-section" appScrollToContact
+                   [attr.aria-label]="'a11y.scrollToContact' | translate"></a>
 
             </div>
             <div class="hero-headline">
