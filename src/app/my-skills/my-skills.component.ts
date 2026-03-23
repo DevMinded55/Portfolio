@@ -42,6 +42,18 @@ export class MySkillsComponent {
       image: "/assets/images/my_skills_section/git.png",
     },
     {
+      name: "Material Design",
+      image: "/assets/images/my_skills_section/material_design.png",
+    },
+    {
+      name: "Scrum",
+      image: "/assets/images/my_skills_section/scrum.png",
+    },
+    {
+      name: "Vue.js",
+      image: "/assets/images/my_skills_section/vue_js.png",
+    },
+    {
       name: "Challenge me",
       image: "/assets/images/my_skills_section/challenge-me.png",
     },

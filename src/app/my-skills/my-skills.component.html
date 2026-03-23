@@ -1,7 +1,7 @@
 <section id="skills">
     <div class="my-skills content">
         <h3>{{'skills.h3' | translate }}</h3>
-        <div>
+        <div class="skills-grid">
             @for (item of skills; let i = $index; track $index) {
             <div class="skill-wrapper" (mouseenter)="onMouseEnter(i)" (mouseleave)="onMouseLeave()">
                 <app-skill-item [skills]="item"></app-skill-item>

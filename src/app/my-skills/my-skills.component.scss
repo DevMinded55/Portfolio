@@ -42,7 +42,7 @@ section {
         }
     }
 
-    div {
+    > .skills-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(187px, 1fr));
         gap: 80px;
