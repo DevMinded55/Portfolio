@@ -1,13 +1,25 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import {TranslatePipe, TranslateDirective, TranslateService} from "@ngx-translate/core";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
+import { provideTranslateService } from '@ngx-translate/core';
 
-@Component({
-  selector: 'app-privacy-policy',
-  imports: [TranslatePipe, RouterLink],
-  templateUrl: './privacy-policy.component.html',
-  styleUrl: './privacy-policy.component.scss'
-})
-export class PrivacyPolicyComponent {
+import { PrivacyPolicyComponent } from './privacy-policy.component';
 
-}
+describe('PrivacyPolicyComponent', () => {
+  let component: PrivacyPolicyComponent;
+  let fixture: ComponentFixture<PrivacyPolicyComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [PrivacyPolicyComponent],
+      providers: [provideRouter([]), provideTranslateService()],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(PrivacyPolicyComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

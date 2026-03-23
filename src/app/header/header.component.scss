@@ -46,11 +46,11 @@ header {
 
         >nav {
             @include all.letsflex($justify: space-evenly);
-            width: 800px;
+            width: 920px;
             font-size: 22px;
 
             @media (max-width: 1255px) {
-                width: 500px;
+                width: 600px;
             }
 
             @media (max-width: 970px) {

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Feedbacks } from '../shared/interfaces/feedbacks';
 import { FeedbackItemComponent } from "./feedback-item/feedback-item.component";
-import {TranslatePipe, TranslateDirective, TranslateService} from "@ngx-translate/core";
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-teamplayer',
@@ -13,7 +13,7 @@ export class TeamplayerComponent {
   feedbacks:Array<Feedbacks> = [
     {
       name: "Noah Mueller",
-      project: "Project Sharkie",
+      project: "Project Join",
       personalFeedbacks: "teamplayer.feedback1.personalFeedbacks",
     },
     {

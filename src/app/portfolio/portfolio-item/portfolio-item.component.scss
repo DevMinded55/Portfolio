@@ -1,6 +1,11 @@
 @use 'all-styles' as all;
 @use '../../../styles.scss';
 
+:host {
+    display: block;
+    width: 100%;
+}
+
 section{
     margin-bottom: 32px;
     width: 1200px;
@@ -72,6 +77,9 @@ section{
                 display: none;
             }
             .github-btn{
+                position: relative;
+                z-index: 2;
+                cursor: pointer;
                 height: 52px;
                 width: 125px;
                 text-decoration: none;
@@ -106,6 +114,9 @@ section{
         height: 52px;
         margin-top: 16px;
         .github-btn{
+            position: relative;
+            z-index: 2;
+            cursor: pointer;
             height: 52px;
             width: 100px;
             text-decoration: none;

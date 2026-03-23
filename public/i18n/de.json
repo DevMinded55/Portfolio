@@ -3,7 +3,8 @@
     "nav1": "Warum ich",
     "nav2": "Fähigkeiten",
     "nav3": "Projekte",
-    "nav4": "Kontakt"
+    "nav4": "Kontakt",
+    "nav5": "Datenschutz"
   },
   "a-t-f": {
     "button": "KONTAKT"
@@ -27,9 +28,6 @@
   "projects": {
     "h3": "Meine Projekte",
     "join": {
-      "description": "Ein Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu."
-    },
-    "sharkie": {
       "description": "Ein Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu."
     },
     "polloLoco": {
@@ -68,5 +66,8 @@
   "impressum": {
     "h1": "Impressum",
     "btn": "Zurück"
+  },
+  "privacy": {
+    "backHome": "Zurück zur Startseite"
   }
 }

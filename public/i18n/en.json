@@ -3,7 +3,8 @@
     "nav1": "Why me",
     "nav2": "Skills",
     "nav3": "Projects",
-    "nav4": "Contact"
+    "nav4": "Contact",
+    "nav5": "Privacy"
   },
   "a-t-f": {
     "button": "CONTACT ME"
@@ -26,9 +27,6 @@
   "projects": {
     "h3": "My Projects",
     "join": {
-      "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
-    },
-    "sharkie": {
       "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
     },
     "polloLoco": {
@@ -67,5 +65,8 @@
   "impressum": {
     "h1": "Legal Notice",
     "btn": "back"
+  },
+  "privacy": {
+    "backHome": "Back to home"
   }
 }
