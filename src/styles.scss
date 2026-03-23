@@ -21,6 +21,13 @@ header, section, footer{
   }
 }
 
+section[id] {
+  scroll-margin-top: 100px;
+  @media (max-width: 880px) {
+    scroll-margin-top: 85px;
+  }
+}
+
 @font-face {
   font-display: swap;
   font-family: 'Handjet';
