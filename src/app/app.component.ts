@@ -8,15 +8,11 @@ import { TeamplayerComponent } from "./teamplayer/teamplayer.component";
 import { FooterComponent } from "./footer/footer.component";
 import { ContactFormComponent } from "./contact-form/contact-form.component";
 import { RouterOutlet } from '@angular/router';
-import {
-    TranslateService,
-    TranslatePipe,
-    TranslateDirective
-} from "@ngx-translate/core";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,HeaderComponent,AboveTheFoldComponent,AboutMeComponent,MySkillsComponent,PortfolioComponent,TeamplayerComponent,FooterComponent,ContactFormComponent, TranslatePipe, TranslateDirective],
+  imports: [RouterOutlet,HeaderComponent,AboveTheFoldComponent,AboutMeComponent,MySkillsComponent,PortfolioComponent,TeamplayerComponent,FooterComponent,ContactFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

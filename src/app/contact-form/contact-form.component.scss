@@ -8,6 +8,8 @@ section{
     margin-left: 108px;
     margin-right: 108px;
     margin-bottom: 92px;
+    color: #02F4BF;
+    font-size: 18px;
     @media (max-width: 880px){
         margin-left: 50px;
         margin-right: 50px;
@@ -24,8 +26,6 @@ section{
                 text-align: center;
             }
     }
-    color: #02F4BF;
-    font-size: 18px;
     .h3-arrow{
         @include all.letsflex($align: center);
         @media (max-width: 817px){
