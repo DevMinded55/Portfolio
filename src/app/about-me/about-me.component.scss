@@ -22,9 +22,12 @@ section {
     }
 
     #image-large {
-        height: 550px;
-        width: 35%;
+        aspect-ratio: 3 / 4;
+        height: clamp(440px, 60vh, 600px);
+        width: auto;
+        max-width: 45%;
         object-fit: cover;
+        object-position: 50% 25%;
         border: 3px solid #02F4BF;
         border-radius: 12px;
         box-shadow: 0 0 20px rgba(2, 244, 191, 0.15);

@@ -22,27 +22,23 @@ section{
         padding-left: 20px;
     }
     > img{
-        height: 80%;
-        width: 40%;
+        aspect-ratio: 3 / 4;
+        height: clamp(380px, 75vh, 720px);
+        width: auto;
+        max-width: 45%;
         object-fit: cover;
+        object-position: 50% 25%;
         border: 3px solid #02F4BF;
         border-radius: 12px;
         box-shadow: 0 0 20px rgba(2, 244, 191, 0.15);
-        @media (max-width: 1095px){
-            width: 50%;
-        }
         @media (max-width: 880px){
-                height: 70%;
-                margin-top: 24%;
-                width: 120%;
-                margin-bottom: 16px;
-                border-radius: 8px;
-        }
-        @media (max-width: 570px){
-                width: 110%;
-        }
-        @media (max-width: 380px){
-                width: 140%;
+            height: auto;
+            width: min(80%, 380px);
+            max-width: 100%;
+            max-height: 55vh;
+            margin-top: 12%;
+            margin-bottom: 16px;
+            border-radius: 8px;
         }
     }
     .hero-main{
