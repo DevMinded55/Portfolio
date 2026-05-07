@@ -16,16 +16,16 @@ export class AboutMeComponent {
   
   readonly icons = {
     location: {
-      default: '/assets/images/about_me/icons/location.png',
-      hover: '/assets/images/about_me/icons/location-hover.png'
+      default: 'assets/images/about_me/icons/location.png',
+      hover: 'assets/images/about_me/icons/location-hover.png'
     },
     relocate: {
-      default: '/assets/images/about_me/icons/relocate.png',
-      hover: '/assets/images/about_me/icons/relocate-hover.png'
+      default: 'assets/images/about_me/icons/relocate.png',
+      hover: 'assets/images/about_me/icons/relocate-hover.png'
     },
     remote: {
-      default: '/assets/images/about_me/icons/remote.png',
-      hover: '/assets/images/about_me/icons/remote-hover.png'
+      default: 'assets/images/about_me/icons/remote.png',
+      hover: 'assets/images/about_me/icons/remote-hover.png'
     }
   };
 }

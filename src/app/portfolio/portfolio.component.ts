@@ -13,8 +13,8 @@ export class PortfolioComponent {
   projects:Array<Projects> = [
     {
       name: "Join",
-      image: "/assets/images/portfolio_section/join.png",
-      hoverImage:"/assets/images/portfolio_section/join-hover.png",
+      image: "assets/images/portfolio_section/join.png",
+      hoverImage:"assets/images/portfolio_section/join-hover.png",
       description: "projects.join.description",
       languages: "Angular | TypeScript | HTML | CSS | Firebase",
       gitlink: "https://github.com/devminded55/join",
@@ -22,8 +22,8 @@ export class PortfolioComponent {
     },
     {
       name: "Pollo Loco",
-      image: "/assets/images/portfolio_section/pollo-loco.png",
-      hoverImage:"/assets/images/portfolio_section/pollo-loco-hover.png",
+      image: "assets/images/portfolio_section/pollo-loco.png",
+      hoverImage:"assets/images/portfolio_section/pollo-loco-hover.png",
       description: "projects.polloLoco.description",
       languages: "JavaScript | HTML | CSS",
       gitlink: "https://github.com/devminded55/El-Pollo-Loco",
