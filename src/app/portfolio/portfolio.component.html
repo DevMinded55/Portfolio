@@ -1,8 +1,8 @@
 <section id="project-section">
     <div class="portfolio content">
-        <h3>{{'projects.h3' | translate }}</h3>
+        <h3 appRevealOnScroll>{{'projects.h3' | translate }}</h3>
         @for (item of projects; track $index) {
-            <app-portfolio-item [projects]="item" [index]="$index"></app-portfolio-item>
+            <app-portfolio-item appRevealOnScroll [revealDelay]="$index * 120" [projects]="item" [index]="$index"></app-portfolio-item>
         }
     </div>
 </section>

@@ -1,10 +1,10 @@
 <section id="contact-section">
     <div class="contact-form content">
-        <div class="h3-arrow">
+        <div class="h3-arrow" appRevealOnScroll>
             <h3>{{'contact.h3' | translate }}</h3>
             <img src="assets/images/about_me/arrow2.png" alt="pfeil rechts">
         </div>
-        <div class="mail-phone-arrow">
+        <div class="mail-phone-arrow" appRevealOnScroll [revealDelay]="100">
             <div class="mail-phone">
                 <p>{{'contact.text' | translate }}</p>
                 <div class="links">
@@ -12,9 +12,9 @@
                     <a href="tel:015127074246"><div class="link-phone"></div><span>Tel : 0151 27 07 42 46</span></a>
                 </div>
             </div>
-            <a class="arrow-up" href="#atf-section"></a>
+            <a class="arrow-up" href="#atf-section" aria-label="Zum Anfang scrollen"></a>
         </div>
-        <div>
+        <div appRevealOnScroll [revealDelay]="200">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="input-info">
                     <div class="name-email">
@@ -48,9 +48,11 @@
             <a href="tel:015127074246"><img src="assets/images/footer/phone.png" alt=""><span>0151 27 07 42 46</span></a>
         </div>
         <div class="icons-resp">
-            <a class="icon-git" href="https://github.com/devminded55" target="_blank"></a>
-            <a class="icon-email" href="mailto:keles490@googlemail.com"></a>
-            <a class="icon-linkedin" href="#" target="_blank"></a>
+            <a class="icon-git" href="https://github.com/devminded55" target="_blank" rel="noopener noreferrer" aria-label="GitHub"></a>
+            <a class="icon-email" href="mailto:keles490@googlemail.com" aria-label="E-Mail"></a>
+            @if (linkedinUrl) {
+                <a class="icon-linkedin" [href]="linkedinUrl" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"></a>
+            }
         </div>
     </div>
 </section>

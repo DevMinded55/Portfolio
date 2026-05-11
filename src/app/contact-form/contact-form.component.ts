@@ -3,16 +3,20 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
+import { RevealOnScrollDirective } from '../shared/directives/reveal-on-scroll.directive';
 
 @Component({
   selector: 'app-contact-form',
-  imports: [FormsModule, TranslatePipe, RouterLink],
+  imports: [FormsModule, TranslatePipe, RouterLink, RevealOnScrollDirective],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })
 export class ContactFormComponent {
 
   http = inject(HttpClient);
+
+  // TODO: LinkedIn-URL nachtragen, sobald Profil verfuegbar
+  readonly linkedinUrl: string = '';
 
   contactData = {
     name: "",

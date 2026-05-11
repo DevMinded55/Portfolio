@@ -49,23 +49,39 @@ section{
             
         }
         .arrow-up{
-            background: url('../../../public/assets/images/about_me/arrow-up.png');
+            background-image: url('../../../public/assets/images/about_me/arrow-up.png');
             width: 50px;
             height: 70px;
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
+            transition: transform 0.3s ease;
+
             @media (max-width: 817px){
                 display: none;
             }
-        }
-        .arrow-up:hover{
-            background: url('../../../public/assets/images/about_me/arrow-up-hover.png');
-            width: 65px;
-            height: 70px;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-image: url('../../../public/assets/images/about_me/arrow-up-hover.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            &:hover,
+            &:focus-visible {
+                transform: translateY(-4px);
+            }
+
+            &:hover::after,
+            &:focus-visible::after {
+                opacity: 1;
+            }
         }
         .mail-phone{
             @include all.letsflex();
@@ -89,36 +105,60 @@ section{
                     text-decoration: none;
                     color: #02F4BF;
                     font-size: 20px;
+                    transition: color 0.3s ease;
                     @include all.letsflex($align: center);
-                    .link-email{
+
+                    &:hover{
+                        color: #E15544;
+                    }
+
+                    .link-email,
+                    .link-phone {
                         margin-right: 8px;
                         width: 30px;
                         height: 30px;
-                        background: url('../../../public/assets/images/footer/email.png') no-repeat center;
+                        background-repeat: no-repeat;
+                        background-position: center;
                         background-size: contain;
+                        transition: transform 0.3s ease;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            inset: 0;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: contain;
+                            opacity: 0;
+                            transition: opacity 0.3s ease;
+                        }
                     }
-                    .link-email:hover{
-                        margin-right: 8px;
-                        width: 30px;
-                        height: 30px;
-                        background: url('../../../public/assets/images/footer/email-hover.png') no-repeat center;
-                        background-size: contain;
+
+                    .link-email {
+                        background-image: url('../../../public/assets/images/footer/email.png');
+
+                        &::after {
+                            background-image: url('../../../public/assets/images/footer/email-hover.png');
+                        }
                     }
-                    .link-phone{
-                        margin-right: 8px;
-                        width: 30px;
-                        height: 30px;
-                        background: url('../../../public/assets/images/footer/phone.png') no-repeat center;
-                        background-size: contain;
+
+                    .link-phone {
+                        background-image: url('../../../public/assets/images/footer/phone.png');
+
+                        &::after {
+                            background-image: url('../../../public/assets/images/footer/phone-hover.png');
+                        }
                     }
-                    .link-phone:hover{
-                        margin-right: 8px;
-                        width: 30px;
-                        height: 30px;
-                        background: url('../../../public/assets/images/footer/phone-hover.png') no-repeat center;
-                        background-size: contain;
+
+                    &:hover .link-email::after,
+                    &:hover .link-phone::after {
+                        opacity: 1;
                     }
-                    
+
+                    &:hover .link-email,
+                    &:hover .link-phone {
+                        transform: scale(1.08);
+                    }
                 }
             }
         }
@@ -189,14 +229,18 @@ section{
 .checkbox-label{
     margin-top: 16px;
     margin-bottom: 16px;
-    font-size: 14px;
+    font-size: 16px;
     @media (max-width: 817px){
-        font-size: 12px;
+        font-size: 16px;
         text-align: center;
     }
     a{
         text-decoration: none;
         color: #E15544;
+        transition: color 0.3s ease;
+        &:hover{
+            color: #02F4BF;
+        }
     }
 }
 .send-btn{
@@ -239,20 +283,38 @@ section{
     margin-top: 8px;
     width: 40px;
     height: 60px;
-    background: url('../../../public/assets/images/about_me/arrow-up.png') no-repeat center;
+    background-image: url('../../../public/assets/images/about_me/arrow-up.png');
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: contain;
+    transition: transform 0.3s ease;
+
     @media (max-width: 817px){
         @include all.letsflex($justify: end);
         margin-left: auto;
     }
-}
-.arrow-resp:hover{
-    background: url('../../../public/assets/images/about_me/arrow-up-hover.png');
-    width: 40px;
-    height: 60px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('../../../public/assets/images/about_me/arrow-up-hover.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    &:hover,
+    &:focus-visible {
+        transform: translateY(-4px);
+    }
+
+    &:hover::after,
+    &:focus-visible::after {
+        opacity: 1;
+    }
 }
 
 .links-resp{
@@ -262,11 +324,16 @@ section{
             @include all.letsflex($direction: column, $align: center);
             text-decoration: none;
             color: #02F4BF;
-            font-size: 14px;
+            font-size: 16px;
             margin-top: 16px;
+            transition: color 0.3s ease, transform 0.3s ease;
             img{
                 height: 30px;
                 width: 30px;
+                transition: transform 0.3s ease;
+            }
+            &:hover img{
+                transform: scale(1.1);
             }
         }
     }
@@ -276,44 +343,64 @@ section{
     display: none;
     justify-content: space-evenly;
     margin-top: 40px;
+    gap: 32px;
     @media (max-width: 817px){
-        @include all.letsflex();
+        @include all.letsflex($justify: center);
     }
-    .icon-git{
+
+    .icon-git,
+    .icon-email,
+    .icon-linkedin {
         width: 30px;
         height: 30px;
-        background: url('../../../public/assets/images/footer/git.png') no-repeat center;
+        background-repeat: no-repeat;
+        background-position: center;
         background-size: contain;
+        transition: transform 0.3s ease;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        &:hover,
+        &:focus-visible {
+            transform: scale(1.08);
+        }
+
+        &:hover::after,
+        &:focus-visible::after {
+            opacity: 1;
+        }
     }
-    .icon-git:hover{
-        width: 30px;
-        height: 30px;
-        background: url('../../../public/assets/images/footer/git-hover.png') no-repeat center;
-        background-size: contain;
+
+    .icon-git {
+        background-image: url('../../../public/assets/images/footer/git.png');
+
+        &::after {
+            background-image: url('../../../public/assets/images/footer/git-hover.png');
+        }
     }
-    .icon-email{
-        width: 30px;
-        height: 30px;
-        background: url('../../../public/assets/images/footer/email.png') no-repeat center;
-        background-size: contain;
+
+    .icon-email {
+        background-image: url('../../../public/assets/images/footer/email.png');
+
+        &::after {
+            background-image: url('../../../public/assets/images/footer/email-hover.png');
+        }
     }
-    .icon-email:hover{
-        width: 30px;
-        height: 30px;
-        background: url('../../../public/assets/images/footer/email-hover.png') no-repeat center;
-        background-size: contain;
+
+    .icon-linkedin {
+        background-image: url('../../../public/assets/images/footer/linkedin.png');
+
+        &::after {
+            background-image: url('../../../public/assets/images/footer/linkedin-hover.png');
+        }
     }
-    .icon-linkedin{
-        width: 30px;
-        height: 30px;
-        background: url('../../../public/assets/images/footer/linkedin.png') no-repeat center;
-        background-size: contain;
-    }
-    .icon-linkedin:hover{
-        width: 30px;
-        height: 30px;
-        background: url('../../../public/assets/images/footer/linkedin-hover.png') no-repeat center;
-        background-size: contain;
-    }
-    
 }

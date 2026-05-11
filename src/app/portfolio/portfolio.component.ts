@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { Projects } from '../shared/interfaces/projects';
 import { PortfolioItemComponent } from "./portfolio-item/portfolio-item.component";
 import { TranslatePipe } from '@ngx-translate/core';
+import { RevealOnScrollDirective } from '../shared/directives/reveal-on-scroll.directive';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [PortfolioItemComponent, TranslatePipe],
+  imports: [PortfolioItemComponent, TranslatePipe, RevealOnScrollDirective],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
@@ -18,7 +19,8 @@ export class PortfolioComponent {
       description: "projects.join.description",
       languages: "Angular | TypeScript | HTML | CSS | Firebase",
       gitlink: "https://github.com/devminded55/join",
-      testlink: "#",
+      // TODO: Live-Test-URL nachtragen, sobald deployed
+      testlink: "",
     },
     {
       name: "Pollo Loco",

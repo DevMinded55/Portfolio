@@ -12,13 +12,11 @@ export class PortfolioItemComponent {
   @Input() projects!: Projects;
   @Input() index!: number;
 
-  isHovered: boolean = false;
-
-  onMouseEnter() {
-    this.isHovered = true;
-  }
-
-  onMouseLeave() {
-    this.isHovered = false;
+  isLinkValid(url: string | undefined | null): boolean {
+    if (!url) return false;
+    const trimmed = url.trim();
+    if (trimmed === '' || trimmed === '#') return false;
+    if (trimmed.startsWith('TODO')) return false;
+    return true;
   }
 }

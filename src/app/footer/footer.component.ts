@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import {TranslatePipe, TranslateDirective, TranslateService} from "@ngx-translate/core";
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
@@ -9,5 +9,6 @@ import {TranslatePipe, TranslateDirective, TranslateService} from "@ngx-translat
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-
+  // TODO: LinkedIn-URL nachtragen, sobald Profil verfuegbar (z.B. 'https://www.linkedin.com/in/...')
+  readonly linkedinUrl: string = '';
 }

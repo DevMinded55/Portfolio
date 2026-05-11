@@ -7,9 +7,11 @@
             </div>
             <p>© Burak Keles 2025</p>
             <div class="social-icons">
-                <a class="git-icon" href="https://github.com/devminded55" target="_blank"></a>
-                <a class="mail-icon" href="mailto:keles490@googlemail.com"></a>
-                <a class="linkedin-icon" href="#" target="_blank"></a>
+                <a class="git-icon" href="https://github.com/devminded55" target="_blank" rel="noopener noreferrer" aria-label="GitHub"></a>
+                <a class="mail-icon" href="mailto:keles490@googlemail.com" aria-label="E-Mail"></a>
+                @if (linkedinUrl) {
+                    <a class="linkedin-icon" [href]="linkedinUrl" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"></a>
+                }
             </div>
         </div>
         <div class="legal-links">

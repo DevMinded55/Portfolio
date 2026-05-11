@@ -1,17 +1,27 @@
 <section [class.reverse]="index % 2 === 1">
     <div class="btn-resp">
-        <a class="github-btn" [href]="projects.gitlink" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a class="live-test-btn" [href]="projects.testlink" target="_blank" rel="noopener noreferrer">Live Test</a>
+        @if (isLinkValid(projects.gitlink)) {
+            <a class="github-btn" [href]="projects.gitlink" target="_blank" rel="noopener noreferrer">GitHub</a>
+        }
+        @if (isLinkValid(projects.testlink)) {
+            <a class="live-test-btn" [href]="projects.testlink" target="_blank" rel="noopener noreferrer">Live Test</a>
+        }
     </div>
-    <img [src]="isHovered ? projects.hoverImage : projects.image" [alt]="projects.name" (mouseenter)="onMouseEnter()"
-        (mouseleave)="onMouseLeave()">
+    <div class="project-image">
+        <img class="project-image__base" [src]="projects.image" [alt]="projects.name">
+        <img class="project-image__hover" [src]="projects.hoverImage" alt="" aria-hidden="true">
+    </div>
     <div class="info-project">
         <h4>{{projects.name}}</h4>
         <p>{{projects.languages}}</p>
         <p>{{ projects.description | translate }}</p>
         <div class="btn-area">
-            <a class="github-btn" [href]="projects.gitlink" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="live-test-btn" [href]="projects.testlink" target="_blank" rel="noopener noreferrer">Live Test</a>
+            @if (isLinkValid(projects.gitlink)) {
+                <a class="github-btn" [href]="projects.gitlink" target="_blank" rel="noopener noreferrer">GitHub</a>
+            }
+            @if (isLinkValid(projects.testlink)) {
+                <a class="live-test-btn" [href]="projects.testlink" target="_blank" rel="noopener noreferrer">Live Test</a>
+            }
         </div>
     </div>
 </section>
