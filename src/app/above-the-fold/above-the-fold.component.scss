@@ -6,12 +6,14 @@ section{
 }
 .hero-wrapper{
     @include all.letsflex($justify: center, $align: center);
-    height: 100dvh;
+    height: calc(100dvh - 92px);
     margin-left: 108px;
     margin-right: 108px;
     @media (max-width: 880px){
+        height: calc(100dvh - 77px);
         flex-direction: column-reverse;
-        justify-content: flex-end;
+        justify-content: flex-start;
+        padding-top: clamp(32px, 8vh, 80px);
     }
     @media (max-width: 570px){
         margin-left: 50px;
@@ -35,9 +37,9 @@ section{
             height: auto;
             width: min(80%, 380px);
             max-width: 100%;
-            max-height: 55vh;
-            margin-top: 12%;
-            margin-bottom: 16px;
+            max-height: 50vh;
+            margin-top: clamp(24px, 6vh, 64px);
+            margin-bottom: 24px;
             border-radius: 8px;
         }
     }
@@ -113,7 +115,7 @@ section{
                 z-index: 2;
                 margin-top: 300px;
                 cursor: pointer;
-                background: url('../../../public/assets/images/about_me/arrow-down.png');
+                background-image: url('../../../public/assets/images/about_me/arrow-down.png');
                 width: 50px;
                 height: 70px;
                 min-width: 50px;
@@ -124,15 +126,32 @@ section{
                 flex-shrink: 0;
                 touch-action: manipulation;
                 -webkit-tap-highlight-color: transparent;
+                transition: transform 0.3s ease;
                 @media (max-width: 1250px){
                     display: none;
                 }
-            }
-            .scroll-cue:hover{
-                background: url('../../../public/assets/images/about_me/arrow-down-hover.png');
-                background-repeat: no-repeat;
-                background-size: contain;
-                background-position: center;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background-image: url('../../../public/assets/images/about_me/arrow-down-hover.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                }
+
+                &:hover,
+                &:focus-visible {
+                    transform: translateY(4px);
+                }
+
+                &:hover::after,
+                &:focus-visible::after {
+                    opacity: 1;
+                }
             }
             
         }

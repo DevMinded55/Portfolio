@@ -2,14 +2,11 @@
 @use '../../styles.scss';
 
 header {
-    margin-bottom: -8dvh;
     position: sticky;
     top: 0;
-    z-index: 1;
-    background: linear-gradient(to bottom,
-            rgba(18, 11, 53, 1) 0%,
-            rgba(18, 11, 53, 1) 50%,
-            rgba(18, 11, 53, 0.6) 100%);
+    z-index: 10;
+    background-color: #120b35;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .header {
@@ -34,9 +31,11 @@ header {
 
         .mark {
             font-size: 48px;
+            transition: color 0.3s ease, transform 0.3s ease;
 
             &:hover {
-                color: #E15544;
+                color: #02F4BF;
+                transform: scale(1.05);
             }
 
             @media (max-width: 880px) {
@@ -61,6 +60,7 @@ header {
         a {
             color: #E15544;
             text-decoration: none;
+            transition: color 0.3s ease;
 
             &:hover {
                 color: #02F4BF;
@@ -81,6 +81,8 @@ header {
             color: #E15544;
             cursor: pointer;
             border: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
 
             &:hover {
                 color: #02F4BF;
@@ -97,9 +99,11 @@ header {
     display: none;
     background-color: transparent;
     border: none;
+    transition: transform 0.3s ease;
 
     &:hover {
         cursor: pointer;
+        transform: scale(1.1);
     }
 
     @media (max-width: 970px) {
@@ -107,40 +111,65 @@ header {
     }
 }
 
+@keyframes overlayFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
 .menu-overlay {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
-    z-index: 2;
+    z-index: 20;
     background: linear-gradient(to top, #291680, #120b35);
+    padding: 96px 32px 64px;
 
-    @include all.letsflex($justify: space-evenly, $align: center, $direction: column);
+    @include all.letsflex($justify: center, $align: center, $direction: column, $gap: 32px);
+    animation: overlayFadeIn 0.3s ease both;
+
+    .overlay-nav {
+        @include all.letsflex($direction: column, $align: center, $gap: 28px);
+        width: 100%;
+        max-width: 320px;
+    }
 
     a {
         text-decoration: none;
         color: #E15544;
-        font-size: 18px;
+        font-size: 22px;
         font-weight: 500;
+        transition: color 0.3s ease, transform 0.3s ease;
 
-        &:hover {
+        &:hover,
+        &:focus-visible {
             color: #02F4BF;
+            transform: translateY(-2px);
         }
     }
 
     .lang-switch-popup {
-        width: 64px;
-        @include all.letsflex($align: center, $justify: space-evenly, $direction: row);
+        width: 88px;
+        @include all.letsflex($align: center, $justify: space-between, $direction: row);
         color: #E15544;
-        font-size: 18px;
+        font-size: 20px;
+        margin-top: 16px;
 
         button {
             background: transparent;
             border: none;
             color: #E15544;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 20px;
+            padding: 4px 8px;
+            transition: color 0.3s ease;
 
             &:hover {
                 color: #02F4BF;
@@ -155,6 +184,11 @@ header {
         position: fixed;
         top: 20px;
         right: 20px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: rotate(90deg);
+        }
     }
 }
 

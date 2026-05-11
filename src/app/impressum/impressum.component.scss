@@ -1,23 +1,37 @@
 @use 'all-styles' as all;
 @use '../../styles.scss';
 
-section{
+section.legal-page {
     background-color: #120b35;
     min-height: 100dvh;
     color: #02F4BF;
     font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    p{
-        margin: 8px;
+    @include all.letsflex($direction: column, $justify: flex-start, $align: center);
+    padding: 48px 0 64px;
+}
+
+.legal-inner {
+    width: 100%;
+    max-width: 800px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    p {
+        margin: 8px 0;
     }
-    h1{
+
+    h1 {
         font-size: 54px;
         color: #E15544;
+        margin-bottom: 24px;
     }
-    a{
+
+    a {
         color: #E15544;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #02F4BF;
+        }
     }
 }

@@ -43,25 +43,6 @@
   padding-right: 24px;
 }
 
-.back-home {
-  display: inline-block;
-  align-self: flex-start;
-  margin-bottom: 32px;
-  font-size: 18px;
-  font-weight: 700;
-  text-decoration: none;
-  color: #e15544;
-
-  &:hover {
-    text-decoration: underline;
-  }
-
-  &--footer {
-    margin-top: 48px;
-    margin-bottom: 0;
-  }
-}
-
 #generator_results_content {
   line-height: 1.5;
 }
