@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { Feedbacks } from '../shared/interfaces/feedbacks';
 import { FeedbackItemComponent } from "./feedback-item/feedback-item.component";
 import { TranslatePipe } from '@ngx-translate/core';
+import { RevealOnScrollDirective } from '../shared/directives/reveal-on-scroll.directive';
 
 @Component({
   selector: 'app-teamplayer',
-  imports: [FeedbackItemComponent, TranslatePipe],
+  imports: [FeedbackItemComponent, TranslatePipe, RevealOnScrollDirective],
   templateUrl: './teamplayer.component.html',
   styleUrl: './teamplayer.component.scss'
 })

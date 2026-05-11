@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Skills } from '../shared/interfaces/skills';
 import { SkillsItemComponent } from './skill-item/skill-item.component';
-import { TranslatePipe, TranslateDirective, TranslateService } from "@ngx-translate/core";
+import { TranslatePipe } from "@ngx-translate/core";
 import { ScrollToContactDirective } from '../shared/directives/scroll-to-contact.directive';
+import { RevealOnScrollDirective } from '../shared/directives/reveal-on-scroll.directive';
 
 @Component({
   selector: 'app-my-skills',
-  imports: [SkillsItemComponent, CommonModule, TranslatePipe, ScrollToContactDirective],
+  imports: [SkillsItemComponent, CommonModule, TranslatePipe, ScrollToContactDirective, RevealOnScrollDirective],
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss'
 })

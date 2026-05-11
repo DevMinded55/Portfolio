@@ -1,5 +1,14 @@
 @use 'all-styles' as all;
 
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -22,9 +31,73 @@ header, section, footer{
 }
 
 section[id] {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 108px;
   @media (max-width: 880px) {
-    scroll-margin-top: 85px;
+    scroll-margin-top: 93px;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal--left {
+  transform: translateX(-24px);
+}
+
+.reveal--right {
+  transform: translateX(24px);
+}
+
+.reveal--scale {
+  transform: scale(0.92);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal--left,
+  .reveal--right,
+  .reveal--scale {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.icon-cross {
+  display: inline-block;
+  position: relative;
+  line-height: 0;
+
+  img {
+    display: block;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .icon-cross__hover {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+  }
+
+  &:hover .icon-cross__base,
+  &:focus-visible .icon-cross__base {
+    opacity: 0;
+  }
+
+  &:hover .icon-cross__hover,
+  &:focus-visible .icon-cross__hover {
+    opacity: 1;
+    transform: scale(1.08);
   }
 }
 

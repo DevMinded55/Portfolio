@@ -1,20 +1,21 @@
 <section id="about-me-section">
     <div class="profile-wrapper content">
-        <img id="image-large" src="assets/images/hero_section/me2.png" alt="">
+        <img appRevealOnScroll revealVariant="left" id="image-large" src="assets/images/hero_section/me2.png" alt="">
         <div class="profile-text-group">
-            <h3>{{'about-me.h3' | translate }}</h3>
-            <div>{{'about-me.text' | translate }}</div>
+            <h3 appRevealOnScroll>{{'about-me.h3' | translate }}</h3>
+            <div appRevealOnScroll [revealDelay]="100">{{'about-me.text' | translate }}</div>
 
-            <div class="traits-box">
+            <div class="traits-box" appRevealOnScroll [revealDelay]="200">
                 <img class="arrow-mobile" src="assets/images/about_me/arrow1.png" alt="">
                 <h4 id="mobile-heading">{{'about-me.h4' | translate }}</h4>
 
                 <!-- LOCATION -->
                 <div class="trait-row">
                     <h4 id="desktop-heading">{{'about-me.h4' | translate }}</h4>
-                    <img class="trait-icon" [src]="isLocationHovered ? icons.location.hover : icons.location.default"
-                        (mouseenter)="isLocationHovered = true" (mouseleave)="isLocationHovered = false"
-                        alt="Location Icon">
+                    <span class="trait-icon icon-cross">
+                        <img class="icon-cross__base" [src]="icons.location.default" alt="Location Icon">
+                        <img class="icon-cross__hover" [src]="icons.location.hover" alt="" aria-hidden="true">
+                    </span>
                     <div class="trait-description">
                         <p>{{'about-me.located' | translate }}</p>
                         <p>{{'about-me.in' | translate }}</p>
@@ -24,10 +25,10 @@
                 <!-- RELOCATE -->
                 <div class="trait-row">
                     <img id="arrow-start" class="nav-arrow" src="assets/images/about_me/arrow1.png" alt="">
-                    <img id="briefcase-icon" class="trait-icon"
-                        [src]="isRelocateHovered ? icons.relocate.hover : icons.relocate.default"
-                        (mouseenter)="isRelocateHovered = true" (mouseleave)="isRelocateHovered = false"
-                        alt="Relocate Icon">
+                    <span id="briefcase-icon" class="trait-icon icon-cross">
+                        <img class="icon-cross__base" [src]="icons.relocate.default" alt="Relocate Icon">
+                        <img class="icon-cross__hover" [src]="icons.relocate.hover" alt="" aria-hidden="true">
+                    </span>
                     <div class="trait-description">
                         <p>{{'about-me.open' | translate }}</p>
                         <p>{{'about-me.relocate' | translate }}</p>
@@ -36,9 +37,10 @@
 
                 <!-- REMOTE -->
                 <div class="trait-row">
-                    <img id="remote-icon" class="trait-icon"
-                        [src]="isRemoteHovered ? icons.remote.hover : icons.remote.default"
-                        (mouseenter)="isRemoteHovered = true" (mouseleave)="isRemoteHovered = false" alt="Remote Icon">
+                    <span id="remote-icon" class="trait-icon icon-cross">
+                        <img class="icon-cross__base" [src]="icons.remote.default" alt="Remote Icon">
+                        <img class="icon-cross__hover" [src]="icons.remote.hover" alt="" aria-hidden="true">
+                    </span>
                     <div class="trait-description">
                         <p>{{'about-me.open' | translate }}</p>
                         <p>{{'about-me.remote' | translate }}</p>
@@ -50,7 +52,7 @@
                 <img id="arrow-mobile-flip" class="arrow-mobile" src="assets/images/about_me/arrow1.png" alt="">
             </div>
 
-            <a href="#contact-section" appScrollToContact>{{'about-me.talk' | translate }}</a>
+            <a href="#contact-section" appScrollToContact appRevealOnScroll [revealDelay]="300">{{'about-me.talk' | translate }}</a>
         </div>
     </div>
 </section>

@@ -137,12 +137,12 @@ section {
 
                 #briefcase-icon {
                     min-height: 48.98px;
+                    height: 48.98px;
                     width: 30px;
-                    object-fit: contain;
-                    transition: all 0.7s ease-in-out;
 
                     @media (max-width: 570px) {
                         height: 38.98px;
+                        min-height: 38.98px;
                         width: 20px;
                     }
                 }
@@ -150,13 +150,13 @@ section {
                 #remote-icon {
                     margin-left: 30%;
                     min-height: 46.99px;
+                    height: 46.99px;
                     width: 53.58px;
-                    object-fit: contain;
-                    transition: all 2s ease-in-out;
 
                     @media (max-width: 570px) {
                         margin-left: 0;
                         height: 36.99px;
+                        min-height: 36.99px;
                         width: 43.58px;
                     }
                 }
@@ -180,16 +180,22 @@ section {
             }
 
             .trait-icon {
-                // height: 41px;
                 min-height: 41px;
+                height: 41px;
                 width: 33.31px;
                 margin-right: 16px;
-                object-fit: contain;
-                transition: all 0.3s ease-in-out;
+                flex-shrink: 0;
 
                 @media (max-width: 570px) {
                     height: 31px;
+                    min-height: 31px;
                     width: 23.31px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
                 }
             }
 
