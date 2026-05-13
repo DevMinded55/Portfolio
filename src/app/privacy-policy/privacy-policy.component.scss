@@ -8,13 +8,18 @@
   font-size: 16px;
   @include all.letsflex($direction: column, $justify: flex-start, $align: center);
   padding: 48px 0 64px;
+  overflow-x: clip;
 
   p {
     margin: 8px 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   h1 {
-    font-size: 54px;
+    font-size: clamp(20px, 7vw, 54px);
+    line-height: 1.1;
+    white-space: nowrap;
     color: #e15544;
     margin-bottom: 24px;
   }
@@ -25,20 +30,25 @@
     margin-top: 24px;
     margin-bottom: 8px;
     color: #e15544;
+    overflow-wrap: anywhere;
   }
 
   a {
     color: #e15544;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   ul {
     margin: 12px 0 12px 24px;
+    overflow-wrap: anywhere;
   }
 }
 
 .privacy-inner {
   width: 100%;
   max-width: 800px;
+  min-width: 0;
   padding-left: 24px;
   padding-right: 24px;
 }
