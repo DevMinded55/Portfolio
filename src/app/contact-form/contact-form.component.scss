@@ -49,38 +49,42 @@ section{
             
         }
         .arrow-up{
-            background-image: url('../../../public/assets/images/about_me/arrow-up.png');
-            width: 50px;
-            height: 70px;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            transition: transform 0.3s ease;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            background: transparent;
+            border: 1.5px solid transparent;
+            width: 66px;
+            height: 86px;
+            min-width: 66px;
+            min-height: 86px;
+            flex-shrink: 0;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            transition: border-color 0.3s ease;
 
             @media (max-width: 817px){
                 display: none;
             }
 
-            &::after {
+            &::before {
                 content: '';
                 position: absolute;
-                inset: 0;
-                background-image: url('../../../public/assets/images/about_me/arrow-up-hover.png');
-                background-repeat: no-repeat;
-                background-size: contain;
-                background-position: center;
-                opacity: 0;
-                transition: opacity 0.3s ease;
+                inset: 8px;
+                background-color: #E15544;
+                mask: url('../../../public/assets/images/about_me/arrow-up.png') no-repeat center / contain;
+                -webkit-mask: url('../../../public/assets/images/about_me/arrow-up.png') no-repeat center / contain;
+                transition: background-color 0.3s ease;
             }
 
             &:hover,
             &:focus-visible {
-                transform: translateY(-4px);
+                border-color: #02F4BF;
             }
 
-            &:hover::after,
-            &:focus-visible::after {
-                opacity: 1;
+            &:hover::before,
+            &:focus-visible::before {
+                background-color: #02F4BF;
             }
         }
         .mail-phone{
@@ -281,39 +285,43 @@ section{
 .arrow-resp{
     display: none;
     margin-top: 8px;
-    width: 40px;
-    height: 60px;
-    background-image: url('../../../public/assets/images/about_me/arrow-up.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transition: transform 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    background: transparent;
+    border: 1.5px solid transparent;
+    width: 56px;
+    height: 76px;
+    min-width: 56px;
+    min-height: 76px;
+    flex-shrink: 0;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    transition: border-color 0.3s ease;
 
     @media (max-width: 817px){
-        @include all.letsflex($justify: end);
+        display: block;
         margin-left: auto;
+        margin-right: 0;
     }
 
-    &::after {
+    &::before {
         content: '';
         position: absolute;
-        inset: 0;
-        background-image: url('../../../public/assets/images/about_me/arrow-up-hover.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
+        inset: 8px;
+        background-color: #E15544;
+        mask: url('../../../public/assets/images/about_me/arrow-up.png') no-repeat center / contain;
+        -webkit-mask: url('../../../public/assets/images/about_me/arrow-up.png') no-repeat center / contain;
+        transition: background-color 0.3s ease;
     }
 
     &:hover,
     &:focus-visible {
-        transform: translateY(-4px);
+        border-color: #02F4BF;
     }
 
-    &:hover::after,
-    &:focus-visible::after {
-        opacity: 1;
+    &:hover::before,
+    &:focus-visible::before {
+        background-color: #02F4BF;
     }
 }
 
