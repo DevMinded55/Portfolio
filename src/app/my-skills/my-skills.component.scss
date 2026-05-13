@@ -64,14 +64,6 @@ section {
     }
 }
 
-.hint-text {
-    display: none;
-
-    @media (max-width: 498px) {
-        @include all.letsflex();
-    }
-}
-
 .hint-btn {
     display: none;
 
