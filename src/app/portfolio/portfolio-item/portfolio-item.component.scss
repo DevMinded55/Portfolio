@@ -7,7 +7,7 @@
 }
 
 section{
-    margin-bottom: 32px;
+    margin: 0 auto 32px;
     width: 1200px;
     @include all.letsflex($justify: space-between);
     &.reverse {
