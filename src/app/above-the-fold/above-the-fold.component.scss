@@ -11,9 +11,10 @@ section{
     margin-right: 108px;
     @media (max-width: 880px){
         height: calc(100dvh - 77px);
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: flex-start;
-        padding-top: clamp(32px, 8vh, 80px);
+        gap: clamp(16px, 3vh, 28px);
+        padding-top: clamp(16px, 4vh, 40px);
     }
     @media (max-width: 570px){
         margin-left: 50px;
@@ -37,9 +38,8 @@ section{
             height: auto;
             width: min(80%, 380px);
             max-width: 100%;
-            max-height: 50vh;
-            margin-top: clamp(24px, 6vh, 64px);
-            margin-bottom: 24px;
+            max-height: clamp(260px, 42dvh, 380px);
+            margin-top: clamp(12px, 3vh, 28px);
             border-radius: 8px;
         }
     }
@@ -51,8 +51,10 @@ section{
         flex-direction: column;
         // @include all.letsflex($direction: column, $justify: space-between); // FEHLER, PFEIL NICHT RICHTIG PLATZIERT?!
         @media (max-width: 880px){
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            height: 0;
+            height: auto;
             width: 100%;
         }
         .hero-headline{
