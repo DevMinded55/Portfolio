@@ -3,34 +3,30 @@
 
 :host{
     display: flex;
+    width: 100%;
 }
 
 .feedbacks{
-
-    @include all.letsflex($direction: column, $justify: space-between);
+    @include all.letsflex($direction: column, $gap: 8px);
     width: 100%;
-    min-height: 200px;
-    height: 100%;
+    box-sizing: border-box;
     @media (max-width: 1485px){
-        margin-right: 0;
-    }
-    @media (max-width: 1270px){
         border: 1px solid #02F4BF;
-        padding: 12px;
-        min-height: 230px;
+        padding: 16px;
     }
     @media (max-width: 740px){
         max-width: 320px;
-        min-height: 230px;
-        margin-right: 0;
+        margin-inline: auto;
     }
     h4{
         color: #E15544;
         font-size: 24px;
         font-weight: 700;
+        word-break: break-word;
     }
     p{
         color: #02F4BF;
         overflow-wrap: break-word;
+        word-break: break-word;
     }
 }
