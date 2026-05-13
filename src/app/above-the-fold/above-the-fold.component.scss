@@ -10,11 +10,12 @@ section{
     margin-left: 108px;
     margin-right: 108px;
     @media (max-width: 880px){
-        height: calc(100dvh - 77px);
+        height: auto;
         flex-direction: column;
         justify-content: flex-start;
         gap: clamp(16px, 3vh, 28px);
         padding-top: clamp(16px, 4vh, 40px);
+        padding-bottom: clamp(32px, 6vh, 56px);
     }
     @media (max-width: 570px){
         margin-left: 50px;
