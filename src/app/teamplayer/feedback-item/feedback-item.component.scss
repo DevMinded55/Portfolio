@@ -1,20 +1,28 @@
 @use 'all-styles' as all;
 @use '../../../styles.scss';
 
+:host{
+    display: flex;
+}
 
 .feedbacks{
 
     @include all.letsflex($direction: column, $justify: space-between);
-    width: 320px;
-    height: 200px;
+    width: 100%;
+    min-height: 200px;
+    height: 100%;
     @media (max-width: 1485px){
-        margin-right: 24px;
+        margin-right: 0;
     }
     @media (max-width: 1270px){
         border: 1px solid #02F4BF;
-        width: 205px;
-        padding: 8px;
-        height: 230px;
+        padding: 12px;
+        min-height: 230px;
+    }
+    @media (max-width: 740px){
+        max-width: 320px;
+        min-height: 230px;
+        margin-right: 0;
     }
     h4{
         color: #E15544;
@@ -23,5 +31,6 @@
     }
     p{
         color: #02F4BF;
+        overflow-wrap: break-word;
     }
 }

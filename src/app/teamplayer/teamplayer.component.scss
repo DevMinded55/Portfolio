@@ -53,7 +53,7 @@ section{
                 justify-content: center;
         }
         @media (max-width: 705px){
-            width: 300px;
+            width: 100%;
         }
         img{
             transform: rotate(-30deg);
@@ -63,20 +63,35 @@ section{
             }
         }
         .feedbacks-content{
-            @include all.letsflex($justify: space-between);
+            display: grid;
+            grid-template-columns: repeat(3, 320px);
+            grid-auto-rows: 1fr;
+            justify-content: space-between;
+            align-items: stretch;
+            gap: 24px;
             width: 100%;
             max-width: 100%;
+            app-feedback-item{
+                display: flex;
+                min-width: 0;
+            }
             @media (max-width: 1270px){
+                grid-template-columns: repeat(3, clamp(240px, 28vw, 320px));
+                justify-content: start;
                 overflow-x: auto;
                 scrollbar-width: none;
                 -ms-overflow-style: none;
                 cursor: grab;
             }
             @media (max-width: 740px){
-                width: 60%;
+                grid-template-columns: minmax(0, 320px);
+                justify-content: center;
+                width: 100%;
+                overflow-x: visible;
+                cursor: default;
             }
             @media (max-width: 580px){
-                width: 70%;
+                width: 100%;
             }
         }
         .feedbacks-content::-webkit-scrollbar {
