@@ -1,7 +1,19 @@
 @use 'all-styles' as all;
 
+:root {
+    --header-height: 92px;
+    --scroll-anchor-offset: 16px;
+}
+
+@media (max-width: 880px) {
+    :root {
+        --header-height: 77px;
+    }
+}
+
 html {
     font-size: 16px;
+    scroll-padding-top: calc(var(--header-height) + var(--scroll-anchor-offset));
 }
 
 body {
@@ -31,10 +43,7 @@ header, section, footer{
 }
 
 section[id] {
-  scroll-margin-top: 108px;
-  @media (max-width: 880px) {
-    scroll-margin-top: 93px;
-  }
+  scroll-margin-top: calc(var(--header-height) + var(--scroll-anchor-offset));
 }
 
 .reveal {

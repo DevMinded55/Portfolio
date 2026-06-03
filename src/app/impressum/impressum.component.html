@@ -1,13 +1,14 @@
 <app-header></app-header>
 <section class="legal-page" id="impressum-section">
     <div class="content legal-inner">
+        <button type="button" class="legal-back" (click)="goBackHome()">{{'impressum.btn' | translate }}</button>
         <h1>{{'impressum.h1' | translate }}</h1>
         <p>Burak Keles</p>
         <p>Untere Seewiese 11</p>
         <p>64711 Erbach</p>
         <p>Deutschland</p>
         <p>Telefon: 0151 2707 42 46</p>
-        <p>E-Mail: keles490&commat;googlemail.com</p>
+        <p>E-Mail: <a href="mailto:keles490@googlemail.com">keles490&commat;googlemail.com</a></p>
     </div>
 </section>
 <app-footer></app-footer>

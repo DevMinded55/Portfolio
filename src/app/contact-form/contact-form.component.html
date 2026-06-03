@@ -12,27 +12,27 @@
                     <a href="tel:015127074246"><div class="link-phone"></div><span>Tel : 0151 27 07 42 46</span></a>
                 </div>
             </div>
-            <a class="arrow-up" href="#atf-section" aria-label="Zum Anfang scrollen"></a>
+            <a class="arrow-up" href="#atf-section" appScrollToTop aria-label="Zum Anfang scrollen"></a>
         </div>
         <div appRevealOnScroll [revealDelay]="200">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="input-info">
                     <div class="name-email">
                         <label class="d-none" for="name"></label>
-                        <input [(ngModel)]="contactData.name" class="form-input" type="text" id="name" name="name" placeholder="{{'contact.name' | translate }}" required>
+                        <input [(ngModel)]="contactData.name" class="form-input" type="text" id="name" name="name" placeholder="{{'contact.name' | translate }}" required [appTrimMinLength]="2" #name="ngModel">
 
                         <label class="d-none" for="email"></label>
                         <input [(ngModel)]="contactData.email" class="form-input" type="email" id="email" name="email" placeholder="{{'contact.email' | translate }}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                     </div>
                     <div class="text">
                         <label class="d-none" for="message"></label>
-                        <textarea [(ngModel)]="contactData.message" class="form-text" id="message" name="message" placeholder="{{'contact.message' | translate }}" required></textarea>
+                        <textarea [(ngModel)]="contactData.message" class="form-text" id="message" name="message" placeholder="{{'contact.message' | translate }}" required [appTrimMinLength]="2" #message="ngModel"></textarea>
                     </div>
                 </div>
                 <div class="checkbox-label">
                     <label class="checkbox-label">
                     <input type="checkbox" class="checkbox-input" name="privacy" [(ngModel)]="contactData.privacy" required>
-                    {{'contact.i-have' | translate }}<a routerLink="/privacy-policy">{{'contact.policy' | translate }}</a>{{'contact.agree' | translate }}
+                    {{'contact.i-have' | translate }}<a routerLink="/privacy-policy" appLegalReturn="contact-section">{{'contact.policy' | translate }}</a>{{'contact.agree' | translate }}
                     </label>
                 </div>
                 <div class="send-btn">
@@ -41,10 +41,10 @@
             </form>
         </div>
         <div>
-            <a class="arrow-resp" href="#atf-section"></a>
+            <a class="arrow-resp" href="#atf-section" appScrollToTop aria-label="Zum Anfang scrollen"></a>
         </div>
         <div class="links-resp">
-            <a href="mailto:r.keles490@googlemail.com"><img src="assets/images/footer/email.png" alt=""><span>keles490&commat;gmail.com</span></a>
+            <a href="mailto:keles490@googlemail.com"><img src="assets/images/footer/email.png" alt=""><span>keles490&commat;gmail.com</span></a>
             <a href="tel:015127074246"><img src="assets/images/footer/phone.png" alt=""><span>0151 27 07 42 46</span></a>
         </div>
         <div class="icons-resp">

@@ -11,8 +11,8 @@ section{
     color: #02F4BF;
     font-size: 18px;
     @media (max-width: 880px){
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 32px;
+        margin-right: 32px;
     }
     @media (max-width: 374px){
         margin-left: 20px;
@@ -109,6 +109,7 @@ section{
                     text-decoration: none;
                     color: #02F4BF;
                     font-size: 20px;
+                    cursor: pointer;
                     transition: color 0.3s ease;
                     @include all.letsflex($align: center);
 
@@ -205,12 +206,12 @@ section{
     color: #02F4BF;
     padding-left: 10px;
     width: 91%;
-    &.ng-valid.ng-touched {
+    &.ng-dirty.ng-valid {
         border-color: green;
         border-width: 2px;
     }
 
-    &.ng-invalid.ng-touched {
+    &.ng-dirty.ng-invalid {
         border-color: red;
         border-width: 3px;
     }
@@ -226,6 +227,16 @@ section{
     color: #02F4BF;
     padding-left: 10px;
     padding-top: 10px;
+
+    &.ng-dirty.ng-valid {
+        border-color: green;
+        border-width: 2px;
+    }
+
+    &.ng-dirty.ng-invalid {
+        border-color: red;
+        border-width: 3px;
+    }
 }
 .form-text::placeholder{
     color: #02F4BF;
@@ -234,6 +245,7 @@ section{
     margin-top: 16px;
     margin-bottom: 16px;
     font-size: 16px;
+    cursor: pointer;
     @media (max-width: 817px){
         font-size: 16px;
         text-align: center;
@@ -241,6 +253,7 @@ section{
     a{
         text-decoration: none;
         color: #E15544;
+        cursor: pointer;
         transition: color 0.3s ease;
         &:hover{
             color: #02F4BF;
@@ -333,6 +346,7 @@ section{
             text-decoration: none;
             color: #02F4BF;
             font-size: 16px;
+            cursor: pointer;
             margin-top: 16px;
             transition: color 0.3s ease, transform 0.3s ease;
             img{

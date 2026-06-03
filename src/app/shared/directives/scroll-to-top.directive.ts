@@ -2,17 +2,17 @@ import { Directive, HostListener, inject } from '@angular/core';
 import { SectionScrollService } from '../services/section-scroll.service';
 
 /**
- * Scrolls to #contact-section on the home page. Works from other routes via router + fragment.
+ * Scrolls to #atf-section on the home page. Works from other routes via router + fragment.
  */
 @Directive({
-  selector: '[appScrollToContact]',
+  selector: '[appScrollToTop]',
   standalone: true,
 })
-export class ScrollToContactDirective {
+export class ScrollToTopDirective {
   private readonly sectionScroll = inject(SectionScrollService);
 
   @HostListener('click', ['$event'])
   onClick(event: Event): void {
-    this.sectionScroll.scrollToSection('contact-section', event);
+    this.sectionScroll.scrollToSection('atf-section', event);
   }
 }

@@ -1,6 +1,7 @@
 <app-header></app-header>
 <section class="privacy-page" id="privacy-policy-section">
   <div class="content privacy-inner">
+    <button type="button" class="legal-back" (click)="goBackHome()">{{'privacy.backHome' | translate }}</button>
     <div id="generator_results">
       <div id="generator_results_content">
         <h1>{{'privacy.h1' | translate }}</h1>
@@ -49,7 +50,7 @@
         <p>{{'privacy.individualObjection1' | translate }}</p>
         <p>{{'privacy.individualObjection2' | translate }}</p>
         <h3>{{'privacy.objectionRecipientTitle' | translate }}</h3>
-        <p class="generator_user_input">{{'privacy.placeholderInfo' | translate }}</p>
+        <p class="generator_user_input">{{'privacy.objectionRecipientBefore' | translate }} <a href="mailto:keles490@googlemail.com">keles490&commat;googlemail.com</a> (Burak Keles)</p>
         <h2>{{'privacy.changesTitle' | translate }}</h2>
         <p>{{'privacy.changesText' | translate }}</p>
         <h2>{{'privacy.questionsTitle' | translate }}</h2>

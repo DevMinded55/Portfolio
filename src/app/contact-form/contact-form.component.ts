@@ -4,10 +4,21 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { RevealOnScrollDirective } from '../shared/directives/reveal-on-scroll.directive';
+import { ScrollToTopDirective } from '../shared/directives/scroll-to-top.directive';
+import { TrimMinLengthValidatorDirective } from '../shared/validators/trim-min-length.validator';
+import { LegalReturnDirective } from '../shared/directives/legal-return.directive';
 
 @Component({
   selector: 'app-contact-form',
-  imports: [FormsModule, TranslatePipe, RouterLink, RevealOnScrollDirective],
+  imports: [
+    FormsModule,
+    TranslatePipe,
+    RouterLink,
+    RevealOnScrollDirective,
+    ScrollToTopDirective,
+    TrimMinLengthValidatorDirective,
+    LegalReturnDirective,
+  ],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })

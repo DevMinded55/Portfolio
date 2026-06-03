@@ -35,6 +35,7 @@
 
   a {
     color: #e15544;
+    cursor: pointer;
     overflow-wrap: anywhere;
     word-break: break-word;
   }
@@ -51,6 +52,24 @@
   min-width: 0;
   padding-left: 24px;
   padding-right: 24px;
+}
+
+.legal-back {
+  display: inline-block;
+  margin-bottom: 24px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid #e15544;
+  color: #e15544;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    color: #02f4bf;
+    border-color: #02f4bf;
+  }
 }
 
 #generator_results_content {

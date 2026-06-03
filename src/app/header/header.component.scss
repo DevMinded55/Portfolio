@@ -45,6 +45,7 @@ header {
         .mark {
             font-size: 48px;
             flex: 0 0 auto;
+            cursor: pointer;
             transition: color 0.3s ease, transform 0.3s ease;
 
             &:hover {
@@ -75,6 +76,7 @@ header {
         a {
             color: #E15544;
             text-decoration: none;
+            cursor: pointer;
             transition: color 0.3s ease;
 
             &:hover {
@@ -162,6 +164,7 @@ header {
         color: #E15544;
         font-size: 22px;
         font-weight: 500;
+        cursor: pointer;
         transition: color 0.3s ease, transform 0.3s ease;
 
         &:hover,

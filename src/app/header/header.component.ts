@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
-import { ViewportScroller } from '@angular/common';
-import { Router, RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { ScrollToContactDirective } from '../shared/directives/scroll-to-contact.directive';
+import { LegalReturnDirective } from '../shared/directives/legal-return.directive';
+import { SectionScrollService } from '../shared/services/section-scroll.service';
 
 @Component({
   selector: 'app-header',
-  imports: [TranslatePipe, RouterLink, ScrollToContactDirective],
+  imports: [TranslatePipe, RouterLink, ScrollToContactDirective, LegalReturnDirective],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -14,11 +15,9 @@ export class HeaderComponent {
 
   overlayVisible = false;
 
-  constructor(
-    private translate: TranslateService,
-    private router: Router,
-    private viewportScroller: ViewportScroller
-  ) {}
+  private readonly sectionScroll = inject(SectionScrollService);
+
+  constructor(private translate: TranslateService) {}
 
   changeLanguage(language: string): void {
     this.translate.use(language);
@@ -31,16 +30,11 @@ export class HeaderComponent {
 
   goHome(event: Event): void {
     event.preventDefault();
-    const path = this.router.url.split('?')[0].split('#')[0];
-    const isHome = path === '' || path === '/';
+    this.scrollToSection('atf-section');
+  }
 
-    if (isHome) {
-      document.getElementById('atf-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      return;
-    }
-
-    void this.router.navigate(['/'], { fragment: 'atf-section' }).then(() => {
-      setTimeout(() => this.viewportScroller.scrollToAnchor('atf-section'), 0);
-    });
+  scrollToSection(fragment: string, event?: Event): void {
+    this.overlayVisible = false;
+    this.sectionScroll.scrollToSection(fragment, event);
   }
 }

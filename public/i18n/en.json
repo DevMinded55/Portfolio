@@ -25,7 +25,7 @@
   },
   "skills": {
     "h3": "My Skills",
-    "text": "I am always happy to learn new technologies,just tell me what you need."
+    "text": "I enjoy learning new technologies — just tell me what you need."
   },
   "projects": {
     "h3": "My Projects",
@@ -37,9 +37,9 @@
     }
   },
   "teamplayer": {
-    "h4": "Need a teamplayer? Here what my colleagues said about me",
-    "h3-resp": "Need a teamplayer?",
-    "h4-resp": "Here what my colleagues said about me",
+    "h4": "Looking for a team player? Here is what my colleagues say about me",
+    "h3-resp": "Looking for a team player?",
+    "h4-resp": "What my colleagues say about me",
     "feedback1": {
       "personalFeedbacks": "Marcus had to develop, format and deliver content in collaboration with the team members.He is a reliable and friendly person."
     },
@@ -67,7 +67,7 @@
   },
   "impressum": {
     "h1": "Legal Notice",
-    "btn": "back"
+    "btn": "Back to home"
   },
   "privacy": {
     "backHome": "Back to home",
@@ -101,7 +101,7 @@
     "recipientsTitle": "Recipients",
     "recipientsText": "Recipients of the data may include technical service providers who act as processors for the operation and maintenance of our website.",
     "storageTitle": "Storage Period",
-    "storage1": "Data will be deleted no later than [please add information] after the contact request has been processed.",
+    "storage1": "Data will be deleted no later than six months after the contact request has been processed, unless statutory retention obligations apply.",
     "storage2": "If a contractual relationship arises, we are subject to statutory retention periods. These are generally 6 or 10 years for reasons of proper accounting and tax requirements.",
     "provisionTitle": "Provision Prescribed or Required",
     "provisionText": "Providing your personal data is voluntary. However, we can only process your request if you provide us with the required data and the reason for your request.",
@@ -112,7 +112,7 @@
     "individualObjection1": "You have the right, on grounds relating to your particular situation, to object at any time to the processing of personal data concerning you that is based on Art. 6 para. 1 lit. f GDPR (data processing on the basis of a balancing of interests); this also applies to profiling based on this provision within the meaning of Art. 4 No. 4 GDPR.",
     "individualObjection2": "If you object, we will no longer process your personal data unless we can demonstrate compelling legitimate grounds for the processing that override your interests, rights and freedoms, or the processing serves the establishment, exercise or defense of legal claims.",
     "objectionRecipientTitle": "Recipient of an Objection",
-    "placeholderInfo": "[Please add information]",
+    "objectionRecipientBefore": "Please direct objections to:",
     "changesTitle": "Changes to Our Privacy Policy",
     "changesText": "We reserve the right to amend this privacy policy so that it always complies with current legal requirements or to implement changes to our services in the privacy policy, for example when introducing new services. The new privacy policy will then apply to your next visit.",
     "questionsTitle": "Questions About Data Protection",

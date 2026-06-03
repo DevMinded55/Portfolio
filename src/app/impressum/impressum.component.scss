@@ -29,9 +29,28 @@ section.legal-page {
     a {
         color: #E15544;
         transition: color 0.3s ease;
+        cursor: pointer;
 
         &:hover {
             color: #02F4BF;
         }
+    }
+}
+
+.legal-back {
+    display: inline-block;
+    margin-bottom: 24px;
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid #E15544;
+    color: #E15544;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+        color: #02F4BF;
+        border-color: #02F4BF;
     }
 }
